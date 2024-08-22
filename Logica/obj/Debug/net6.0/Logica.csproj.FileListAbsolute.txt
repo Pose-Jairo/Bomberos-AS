@@ -1,0 +1,15 @@
+C:\POO\VS2022\Bomberos A.S\Logica\bin\Debug\net6.0\Logica.deps.json
+C:\POO\VS2022\Bomberos A.S\Logica\bin\Debug\net6.0\Logica.dll
+C:\POO\VS2022\Bomberos A.S\Logica\bin\Debug\net6.0\Logica.pdb
+C:\POO\VS2022\Bomberos A.S\Logica\bin\Debug\net6.0\Datos.dll
+C:\POO\VS2022\Bomberos A.S\Logica\bin\Debug\net6.0\Datos.pdb
+C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\Logica.csproj.AssemblyReference.cache
+C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\Logica.AssemblyInfoInputs.cache
+C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\Logica.AssemblyInfo.cs
+C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\Logica.csproj.CoreCompileInputs.cache
+C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\Logica.csproj.CopyComplete
+C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\Logica.dll
+C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\refint\Logica.dll
+C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\Logica.pdb
+C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\ref\Logica.dll
