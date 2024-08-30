@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            dataGridView1 = new DataGridView();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -40,20 +41,19 @@
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
             groupBox2 = new GroupBox();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
             radioButton5 = new RadioButton();
+            radioButton4 = new RadioButton();
+            radioButton3 = new RadioButton();
             groupBox3 = new GroupBox();
-            button2 = new Button();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            comboBox2 = new ComboBox();
-            textBox3 = new TextBox();
             textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            comboBox2 = new ComboBox();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            button2 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox2.SuspendLayout();
@@ -69,6 +69,15 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Lista del Personal:";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(6, 22);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(476, 188);
+            dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
@@ -170,17 +179,8 @@
             button1.Name = "button1";
             button1.Size = new Size(138, 53);
             button1.TabIndex = 11;
-            button1.Text = "Registrar\r\nPersonal\r\n";
+            button1.Text = "Ejecutar";
             button1.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 22);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(476, 188);
-            dataGridView1.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -194,17 +194,15 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Seleccione una accion";
             // 
-            // radioButton3
+            // radioButton5
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Checked = true;
-            radioButton3.Location = new Point(28, 31);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(115, 19);
-            radioButton3.TabIndex = 0;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Agregar Personal";
-            radioButton3.UseVisualStyleBackColor = true;
+            radioButton5.AutoSize = true;
+            radioButton5.Location = new Point(28, 81);
+            radioButton5.Name = "radioButton5";
+            radioButton5.Size = new Size(116, 19);
+            radioButton5.TabIndex = 2;
+            radioButton5.Text = "Eliminar Personal";
+            radioButton5.UseVisualStyleBackColor = true;
             // 
             // radioButton4
             // 
@@ -216,15 +214,17 @@
             radioButton4.Text = "Modificar Personal";
             radioButton4.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // radioButton3
             // 
-            radioButton5.AutoSize = true;
-            radioButton5.Location = new Point(28, 81);
-            radioButton5.Name = "radioButton5";
-            radioButton5.Size = new Size(116, 19);
-            radioButton5.TabIndex = 2;
-            radioButton5.Text = "Eliminar Personal";
-            radioButton5.UseVisualStyleBackColor = true;
+            radioButton3.AutoSize = true;
+            radioButton3.Checked = true;
+            radioButton3.Location = new Point(28, 31);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(115, 19);
+            radioButton3.TabIndex = 0;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Agregar Personal";
+            radioButton3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -243,6 +243,64 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Filtros de Busqueda:";
             // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(97, 125);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(100, 23);
+            textBox4.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(97, 77);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(100, 23);
+            textBox3.TabIndex = 10;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Oficial", "SubOficial", "Bombero", "Cadete" });
+            comboBox2.Location = new Point(97, 29);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(100, 23);
+            comboBox2.TabIndex = 9;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(68, 95);
+            label9.Name = "label9";
+            label9.Size = new Size(0, 15);
+            label9.TabIndex = 4;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(19, 128);
+            label8.Name = "label8";
+            label8.Size = new Size(72, 15);
+            label8.TabIndex = 3;
+            label8.Text = "Por Apellido";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(16, 80);
+            label7.Name = "label7";
+            label7.Size = new Size(75, 15);
+            label7.TabIndex = 2;
+            label7.Text = "Por Nombre:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(26, 32);
+            label6.Name = "label6";
+            label6.Size = new Size(65, 15);
+            label6.TabIndex = 1;
+            label6.Text = "Por Rango:";
+            // 
             // button2
             // 
             button2.BackColor = Color.Gold;
@@ -254,64 +312,6 @@
             button2.TabIndex = 0;
             button2.Text = "Filtrar";
             button2.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(26, 32);
-            label6.Name = "label6";
-            label6.Size = new Size(65, 15);
-            label6.TabIndex = 1;
-            label6.Text = "Por Rango:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(16, 80);
-            label7.Name = "label7";
-            label7.Size = new Size(75, 15);
-            label7.TabIndex = 2;
-            label7.Text = "Por Nombre:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(19, 128);
-            label8.Name = "label8";
-            label8.Size = new Size(72, 15);
-            label8.TabIndex = 3;
-            label8.Text = "Por Apellido";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(68, 95);
-            label9.Name = "label9";
-            label9.Size = new Size(0, 15);
-            label9.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Oficial", "SubOficial", "Bombero", "Cadete" });
-            comboBox2.Location = new Point(97, 29);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(100, 23);
-            comboBox2.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(97, 77);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(97, 125);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 11;
             // 
             // FrmPersonal
             // 
