@@ -44,6 +44,7 @@
             pLogo = new Panel();
             pFormularios = new Panel();
             tFecha = new System.Windows.Forms.Timer(components);
+            button1 = new Button();
             pBarraSuperior.SuspendLayout();
             pContenedor.SuspendLayout();
             pFecha.SuspendLayout();
@@ -88,6 +89,7 @@
             // pContenedor
             // 
             pContenedor.BackColor = Color.FromArgb(138, 34, 50);
+            pContenedor.Controls.Add(button1);
             pContenedor.Controls.Add(pFecha);
             pContenedor.Controls.Add(btnAdmin);
             pContenedor.Controls.Add(btnConsultas);
@@ -104,7 +106,7 @@
             pFecha.Controls.Add(lblHora);
             pFecha.Controls.Add(lblFecha);
             pFecha.Dock = DockStyle.Bottom;
-            pFecha.Location = new Point(0, 379);
+            pFecha.Location = new Point(0, 304);
             pFecha.Name = "pFecha";
             pFecha.Size = new Size(180, 89);
             pFecha.TabIndex = 4;
@@ -114,7 +116,7 @@
             lblHora.Dock = DockStyle.Bottom;
             lblHora.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblHora.ForeColor = Color.White;
-            lblHora.Location = new Point(0, 45);
+            lblHora.Location = new Point(0, 0);
             lblHora.Name = "lblHora";
             lblHora.Size = new Size(180, 44);
             lblHora.TabIndex = 1;
@@ -123,10 +125,10 @@
             // 
             // lblFecha
             // 
-            lblFecha.Dock = DockStyle.Top;
+            lblFecha.Dock = DockStyle.Bottom;
             lblFecha.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblFecha.ForeColor = Color.White;
-            lblFecha.Location = new Point(0, 0);
+            lblFecha.Location = new Point(0, 44);
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(180, 45);
             lblFecha.TabIndex = 0;
@@ -137,13 +139,13 @@
             // 
             btnAdmin.BackColor = Color.FromArgb(97, 24, 35);
             btnAdmin.Cursor = Cursors.Hand;
-            btnAdmin.Dock = DockStyle.Top;
+            btnAdmin.Dock = DockStyle.Bottom;
             btnAdmin.FlatStyle = FlatStyle.Popup;
             btnAdmin.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdmin.ForeColor = Color.White;
             btnAdmin.Image = (Image)resources.GetObject("btnAdmin.Image");
             btnAdmin.ImageAlign = ContentAlignment.MiddleRight;
-            btnAdmin.Location = new Point(0, 300);
+            btnAdmin.Location = new Point(0, 393);
             btnAdmin.Name = "btnAdmin";
             btnAdmin.Size = new Size(180, 75);
             btnAdmin.TabIndex = 3;
@@ -161,7 +163,7 @@
             btnConsultas.ForeColor = Color.White;
             btnConsultas.Image = (Image)resources.GetObject("btnConsultas.Image");
             btnConsultas.ImageAlign = ContentAlignment.MiddleRight;
-            btnConsultas.Location = new Point(0, 225);
+            btnConsultas.Location = new Point(0, 159);
             btnConsultas.Name = "btnConsultas";
             btnConsultas.Size = new Size(180, 75);
             btnConsultas.TabIndex = 2;
@@ -179,7 +181,7 @@
             btnInicio.ForeColor = Color.White;
             btnInicio.Image = (Image)resources.GetObject("btnInicio.Image");
             btnInicio.ImageAlign = ContentAlignment.MiddleRight;
-            btnInicio.Location = new Point(0, 150);
+            btnInicio.Location = new Point(0, 84);
             btnInicio.Name = "btnInicio";
             btnInicio.RightToLeft = RightToLeft.No;
             btnInicio.Size = new Size(180, 75);
@@ -193,7 +195,7 @@
             pLogo.Dock = DockStyle.Top;
             pLogo.Location = new Point(0, 0);
             pLogo.Name = "pLogo";
-            pLogo.Size = new Size(180, 150);
+            pLogo.Size = new Size(180, 84);
             pLogo.TabIndex = 0;
             // 
             // pFormularios
@@ -209,6 +211,24 @@
             // 
             tFecha.Enabled = true;
             tFecha.Tick += tFecha_Tick;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(97, 24, 35);
+            button1.Cursor = Cursors.Hand;
+            button1.Dock = DockStyle.Bottom;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(0, 229);
+            button1.Name = "button1";
+            button1.Size = new Size(180, 75);
+            button1.TabIndex = 5;
+            button1.Text = "Areas";
+            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button1.UseVisualStyleBackColor = false;
             // 
             // PrincipalFrm
             // 
@@ -245,5 +265,6 @@
         private Panel panel2;
         private Label lblHora;
         private System.Windows.Forms.Timer tFecha;
+        private Button button1;
     }
 }
