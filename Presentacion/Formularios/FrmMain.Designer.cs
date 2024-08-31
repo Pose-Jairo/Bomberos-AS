@@ -142,6 +142,7 @@
             Controls.Add(textBox1);
             Controls.Add(button2);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmMain";
             Text = "FrmMain";
             groupBox1.ResumeLayout(false);
