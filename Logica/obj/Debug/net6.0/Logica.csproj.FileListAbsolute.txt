@@ -13,3 +13,18 @@ C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\Logica.dll
 C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\refint\Logica.dll
 C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\Logica.pdb
 C:\POO\VS2022\Bomberos A.S\Logica\obj\Debug\net6.0\ref\Logica.dll
+F:\Bomberos-AS\Logica\bin\Debug\net6.0\Logica.deps.json
+F:\Bomberos-AS\Logica\bin\Debug\net6.0\Logica.dll
+F:\Bomberos-AS\Logica\bin\Debug\net6.0\Logica.pdb
+F:\Bomberos-AS\Logica\bin\Debug\net6.0\Datos.dll
+F:\Bomberos-AS\Logica\bin\Debug\net6.0\Datos.pdb
+F:\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.csproj.AssemblyReference.cache
+F:\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+F:\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.AssemblyInfoInputs.cache
+F:\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.AssemblyInfo.cs
+F:\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.csproj.CoreCompileInputs.cache
+F:\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.csproj.CopyComplete
+F:\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.dll
+F:\Bomberos-AS\Logica\obj\Debug\net6.0\refint\Logica.dll
+F:\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.pdb
+F:\Bomberos-AS\Logica\obj\Debug\net6.0\ref\Logica.dll

@@ -1,0 +1,98 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Bomberos-AS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|d:\\bomberos-as\\presentacion\\formularios\\principalfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\principalfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|d:\\bomberos-as\\presentacion\\formularios\\principalfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\principalfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|d:\\bomberos-as\\presentacion\\formularios\\menufrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\menufrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|d:\\bomberos-as\\presentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|D:\\Bomberos-AS\\presentacion\\formularios\\menufrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\menufrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PrincipalFrm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Bomberos-AS\\Presentacion\\Formularios\\PrincipalFrm.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Formularios\\PrincipalFrm.cs",
+              "ToolTip": "D:\\Bomberos-AS\\Presentacion\\Formularios\\PrincipalFrm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentacion\\Formularios\\PrincipalFrm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T22:44:11.035Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PrincipalFrm.cs",
+              "DocumentMoniker": "D:\\Bomberos-AS\\Presentacion\\Formularios\\PrincipalFrm.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Formularios\\PrincipalFrm.cs",
+              "ToolTip": "D:\\Bomberos-AS\\Presentacion\\Formularios\\PrincipalFrm.cs",
+              "RelativeToolTip": "Presentacion\\Formularios\\PrincipalFrm.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAADgvxsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T22:44:11.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Bomberos-AS\\Presentacion\\Program.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Program.cs",
+              "ToolTip": "D:\\Bomberos-AS\\Presentacion\\Program.cs",
+              "RelativeToolTip": "Presentacion\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T22:44:11.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuFrm.cs [Design]",
+              "DocumentMoniker": "D:\\Bomberos-AS\\Presentacion\\Formularios\\MenuFrm.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Formularios\\MenuFrm.cs",
+              "ToolTip": "C:\\POO\\VS2022\\Bomberos A.S\\Presentacion\\Formularios\\MenuFrm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-08-26T22:44:12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuFrm.cs",
+              "DocumentMoniker": "D:\\Bomberos-AS\\Presentacion\\Formularios\\MenuFrm.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Formularios\\MenuFrm.cs",
+              "ToolTip": "D:\\Bomberos-AS\\Presentacion\\Formularios\\MenuFrm.cs",
+              "RelativeToolTip": "Presentacion\\Formularios\\MenuFrm.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAADgvxUAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T22:44:12.019Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -44,9 +44,12 @@
             pLogo = new Panel();
             pFormularios = new Panel();
             tFecha = new System.Windows.Forms.Timer(components);
+            pictureBox1 = new PictureBox();
             pBarraSuperior.SuspendLayout();
             pContenedor.SuspendLayout();
             pFecha.SuspendLayout();
+            pLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pBarraSuperior
@@ -190,6 +193,7 @@
             // 
             // pLogo
             // 
+            pLogo.Controls.Add(pictureBox1);
             pLogo.Dock = DockStyle.Top;
             pLogo.Location = new Point(0, 0);
             pLogo.Name = "pLogo";
@@ -210,6 +214,17 @@
             tFecha.Enabled = true;
             tFecha.Tick += tFecha_Tick;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(21, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(140, 140);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // PrincipalFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -226,6 +241,8 @@
             pBarraSuperior.ResumeLayout(false);
             pContenedor.ResumeLayout(false);
             pFecha.ResumeLayout(false);
+            pLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -245,5 +262,6 @@
         private Panel panel2;
         private Label lblHora;
         private System.Windows.Forms.Timer tFecha;
+        private PictureBox pictureBox1;
     }
 }

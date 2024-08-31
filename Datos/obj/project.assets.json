@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\POO\\VS2022\\Bomberos A.S\\Datos\\Datos.csproj",
+      "projectUniqueName": "F:\\Bomberos-AS\\Datos\\Datos.csproj",
       "projectName": "Datos",
-      "projectPath": "C:\\POO\\VS2022\\Bomberos A.S\\Datos\\Datos.csproj",
+      "projectPath": "F:\\Bomberos-AS\\Datos\\Datos.csproj",
       "packagesPath": "C:\\Users\\RYZEN 3 3200g\\.nuget\\packages\\",
-      "outputPath": "C:\\POO\\VS2022\\Bomberos A.S\\Datos\\obj\\",
+      "outputPath": "F:\\Bomberos-AS\\Datos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\RYZEN 3 3200g\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -61,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
