@@ -32,10 +32,6 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
             panel3 = new Panel();
             panel4 = new Panel();
             lblFecha = new Label();
@@ -46,7 +42,6 @@
             button1 = new Button();
             timerHora = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
@@ -77,71 +72,11 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(142, 48, 45);
-            panel2.Controls.Add(button6);
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 353);
             panel2.Name = "panel2";
             panel2.Size = new Size(800, 104);
             panel2.TabIndex = 1;
-            // 
-            // button6
-            // 
-            button6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            button6.BackColor = Color.FromArgb(157, 76, 76);
-            button6.FlatStyle = FlatStyle.Popup;
-            button6.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(592, 29);
-            button6.Name = "button6";
-            button6.Size = new Size(196, 50);
-            button6.TabIndex = 3;
-            button6.Text = "ADMINISTRACION";
-            button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            button5.BackColor = Color.FromArgb(157, 76, 76);
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(330, 29);
-            button5.Name = "button5";
-            button5.Size = new Size(234, 50);
-            button5.TabIndex = 2;
-            button5.Text = "REUNIONES DE AREAS";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            button4.BackColor = Color.FromArgb(157, 76, 76);
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(169, 29);
-            button4.Name = "button4";
-            button4.Size = new Size(135, 50);
-            button4.TabIndex = 1;
-            button4.Text = "SEMANA";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            button3.BackColor = Color.FromArgb(157, 76, 76);
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(23, 29);
-            button3.Name = "button3";
-            button3.Size = new Size(123, 50);
-            button3.TabIndex = 0;
-            button3.Text = "AREAS";
-            button3.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -249,12 +184,11 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "MenuFrm";
             Text = "BOMBEROS";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
@@ -270,11 +204,7 @@
         private Label label1;
         private Panel panel3;
         private Button button1;
-        private Button button3;
         private Button button2;
-        private Button button6;
-        private Button button5;
-        private Button button4;
         private Panel panel4;
         private Label lblHora;
         private System.Windows.Forms.Timer timerHora;

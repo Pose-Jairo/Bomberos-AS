@@ -10,3 +10,15 @@ C:\POO\VS2022\Bomberos A.S\Datos\obj\Debug\net6.0\Datos.dll
 C:\POO\VS2022\Bomberos A.S\Datos\obj\Debug\net6.0\refint\Datos.dll
 C:\POO\VS2022\Bomberos A.S\Datos\obj\Debug\net6.0\Datos.pdb
 C:\POO\VS2022\Bomberos A.S\Datos\obj\Debug\net6.0\ref\Datos.dll
+F:\Bomberos A-S\Datos\bin\Debug\net6.0\Datos.deps.json
+F:\Bomberos A-S\Datos\bin\Debug\net6.0\Datos.dll
+F:\Bomberos A-S\Datos\bin\Debug\net6.0\Datos.pdb
+F:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.GeneratedMSBuildEditorConfig.editorconfig
+F:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.AssemblyInfoInputs.cache
+F:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.AssemblyInfo.cs
+F:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.csproj.CoreCompileInputs.cache
+F:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.sourcelink.json
+F:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.dll
+F:\Bomberos A-S\Datos\obj\Debug\net6.0\refint\Datos.dll
+F:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.pdb
+F:\Bomberos A-S\Datos\obj\Debug\net6.0\ref\Datos.dll

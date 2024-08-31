@@ -42,7 +42,7 @@
             btnConsultas = new Button();
             btnInicio = new Button();
             pLogo = new Panel();
-            pFormularios = new Panel();
+            panelContenedor = new Panel();
             tFecha = new System.Windows.Forms.Timer(components);
             pBarraSuperior.SuspendLayout();
             pContenedor.SuspendLayout();
@@ -168,6 +168,7 @@
             btnConsultas.Text = "Consultas";
             btnConsultas.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnConsultas.UseVisualStyleBackColor = false;
+            btnConsultas.Click += SeleccionButtons;
             // 
             // btnInicio
             // 
@@ -187,6 +188,7 @@
             btnInicio.Text = "Inicio";
             btnInicio.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnInicio.UseVisualStyleBackColor = false;
+            btnInicio.Click += SeleccionButtons;
             // 
             // pLogo
             // 
@@ -196,14 +198,14 @@
             pLogo.Size = new Size(180, 150);
             pLogo.TabIndex = 0;
             // 
-            // pFormularios
+            // panelContenedor
             // 
-            pFormularios.BackColor = Color.FromArgb(208, 167, 173);
-            pFormularios.Dock = DockStyle.Fill;
-            pFormularios.Location = new Point(180, 32);
-            pFormularios.Name = "pFormularios";
-            pFormularios.Size = new Size(770, 468);
-            pFormularios.TabIndex = 2;
+            panelContenedor.BackColor = Color.FromArgb(208, 167, 173);
+            panelContenedor.Dock = DockStyle.Fill;
+            panelContenedor.Location = new Point(180, 32);
+            panelContenedor.Name = "panelContenedor";
+            panelContenedor.Size = new Size(770, 468);
+            panelContenedor.TabIndex = 2;
             // 
             // tFecha
             // 
@@ -215,7 +217,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(950, 500);
-            Controls.Add(pFormularios);
+            Controls.Add(panelContenedor);
             Controls.Add(pContenedor);
             Controls.Add(pBarraSuperior);
             FormBorderStyle = FormBorderStyle.None;
@@ -233,7 +235,7 @@
 
         private Panel pBarraSuperior;
         private Panel pContenedor;
-        private Panel pFormularios;
+        private Panel panelContenedor;
         private Panel pLogo;
         private Button btnInicio;
         private Panel pFecha;
