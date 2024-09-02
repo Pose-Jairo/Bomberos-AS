@@ -7,7 +7,19 @@
       "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\principalfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|c:\\users\\luk\\desktop\\bomberos-as\\presentacion\\formularios\\formularios_admin\\frmpersonal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|C:\\Users\\LUK\\Desktop\\Bomberos-AS\\presentacion\\formularios\\frmareapublic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\frmareapublic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|C:\\Users\\LUK\\Desktop\\Bomberos-AS\\presentacion\\formularios\\formularios_areas\\frmarearegistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\formularios_areas\\frmarearegistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|c:\\users\\luk\\desktop\\bomberos-as\\presentacion\\formularios\\principalfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\principalfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|C:\\Users\\LUK\\Desktop\\Bomberos-AS\\presentacion\\formularios\\formularios_admin\\frmpersonal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\formularios_admin\\frmpersonal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,8 +30,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PrincipalFrm.cs",
+              "DocumentMoniker": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Presentacion\\Formularios\\PrincipalFrm.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Formularios\\PrincipalFrm.cs",
+              "ToolTip": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Presentacion\\Formularios\\PrincipalFrm.cs",
+              "RelativeToolTip": "Presentacion\\Formularios\\PrincipalFrm.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T22:22:18.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmAreaPublic.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Presentacion\\Formularios\\FrmAreaPublic.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Formularios\\FrmAreaPublic.cs",
+              "ToolTip": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Presentacion\\Formularios\\FrmAreaPublic.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentacion\\Formularios\\FrmAreaPublic.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T00:32:33.617Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmAreaRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Presentacion\\Formularios\\Formularios_areas\\FrmAreaRegistro.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Formularios\\Formularios_areas\\FrmAreaRegistro.cs",
+              "ToolTip": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Presentacion\\Formularios\\Formularios_areas\\FrmAreaRegistro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentacion\\Formularios\\Formularios_areas\\FrmAreaRegistro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T00:26:16.338Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -34,15 +83,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "FrmPersonal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Presentacion\\Formularios\\Formularios_Admin\\FrmPersonal.cs",
               "RelativeDocumentMoniker": "Presentacion\\Formularios\\Formularios_Admin\\FrmPersonal.cs",
               "ToolTip": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Presentacion\\Formularios\\Formularios_Admin\\FrmPersonal.cs [Dise\u00F1o]",
               "RelativeToolTip": "Presentacion\\Formularios\\Formularios_Admin\\FrmPersonal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T00:27:08.488Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-08-29T00:27:08.488Z"
             }
           ]
         }

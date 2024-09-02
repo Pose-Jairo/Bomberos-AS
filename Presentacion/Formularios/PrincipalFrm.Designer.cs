@@ -35,6 +35,7 @@
             panel3 = new Panel();
             panel2 = new Panel();
             pContenedor = new Panel();
+            button1 = new Button();
             pFecha = new Panel();
             lblHora = new Label();
             lblFecha = new Label();
@@ -44,7 +45,6 @@
             pLogo = new Panel();
             pFormularios = new Panel();
             tFecha = new System.Windows.Forms.Timer(components);
-            button1 = new Button();
             pBarraSuperior.SuspendLayout();
             pContenedor.SuspendLayout();
             pFecha.SuspendLayout();
@@ -101,6 +101,24 @@
             pContenedor.Size = new Size(180, 468);
             pContenedor.TabIndex = 1;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(97, 24, 35);
+            button1.Cursor = Cursors.Hand;
+            button1.Dock = DockStyle.Bottom;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(0, 229);
+            button1.Name = "button1";
+            button1.Size = new Size(180, 75);
+            button1.TabIndex = 5;
+            button1.Text = "Areas";
+            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button1.UseVisualStyleBackColor = false;
+            // 
             // pFecha
             // 
             pFecha.Controls.Add(lblHora);
@@ -113,7 +131,7 @@
             // 
             // lblHora
             // 
-            lblHora.Dock = DockStyle.Bottom;
+            lblHora.Dock = DockStyle.Top;
             lblHora.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblHora.ForeColor = Color.White;
             lblHora.Location = new Point(0, 0);
@@ -211,24 +229,6 @@
             // 
             tFecha.Enabled = true;
             tFecha.Tick += tFecha_Tick;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(97, 24, 35);
-            button1.Cursor = Cursors.Hand;
-            button1.Dock = DockStyle.Bottom;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleRight;
-            button1.Location = new Point(0, 229);
-            button1.Name = "button1";
-            button1.Size = new Size(180, 75);
-            button1.TabIndex = 5;
-            button1.Text = "Areas";
-            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = false;
             // 
             // PrincipalFrm
             // 

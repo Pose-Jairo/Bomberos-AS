@@ -54,6 +54,11 @@
             label7 = new Label();
             label6 = new Label();
             button2 = new Button();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox2.SuspendLayout();
@@ -62,10 +67,11 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(groupBox3);
             groupBox1.Controls.Add(dataGridView1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(488, 216);
+            groupBox1.Size = new Size(730, 216);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Lista del Personal:";
@@ -73,10 +79,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
             dataGridView1.Location = new Point(6, 22);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(476, 188);
+            dataGridView1.Size = new Size(478, 188);
             dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -236,23 +243,23 @@
             groupBox3.Controls.Add(label7);
             groupBox3.Controls.Add(label6);
             groupBox3.Controls.Add(button2);
-            groupBox3.Location = new Point(524, 12);
+            groupBox3.Location = new Point(490, 22);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(218, 210);
+            groupBox3.Size = new Size(218, 188);
             groupBox3.TabIndex = 13;
             groupBox3.TabStop = false;
             groupBox3.Text = "Filtros de Busqueda:";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(97, 125);
+            textBox4.Location = new Point(97, 84);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 11;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(97, 77);
+            textBox3.Location = new Point(97, 55);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 10;
@@ -261,7 +268,7 @@
             // 
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Oficial", "SubOficial", "Bombero", "Cadete" });
-            comboBox2.Location = new Point(97, 29);
+            comboBox2.Location = new Point(97, 26);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(100, 23);
             comboBox2.TabIndex = 9;
@@ -269,7 +276,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(68, 95);
+            label9.Location = new Point(68, 73);
             label9.Name = "label9";
             label9.Size = new Size(0, 15);
             label9.TabIndex = 4;
@@ -277,7 +284,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(19, 128);
+            label8.Location = new Point(19, 87);
             label8.Name = "label8";
             label8.Size = new Size(72, 15);
             label8.TabIndex = 3;
@@ -286,7 +293,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(16, 80);
+            label7.Location = new Point(16, 58);
             label7.Name = "label7";
             label7.Size = new Size(75, 15);
             label7.TabIndex = 2;
@@ -295,7 +302,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(26, 32);
+            label6.Location = new Point(26, 29);
             label6.Name = "label6";
             label6.Size = new Size(65, 15);
             label6.TabIndex = 1;
@@ -306,19 +313,45 @@
             button2.BackColor = Color.Gold;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(72, 170);
+            button2.Location = new Point(68, 127);
             button2.Name = "button2";
             button2.Size = new Size(75, 28);
             button2.TabIndex = 0;
             button2.Text = "Filtrar";
             button2.UseVisualStyleBackColor = false;
             // 
+            // Column1
+            // 
+            Column1.HeaderText = "Cod:";
+            Column1.Name = "Column1";
+            Column1.Width = 40;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre:";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Apellido:";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Jerarquia:";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Administrador:";
+            Column5.Name = "Column5";
+            Column5.Width = 95;
+            // 
             // FrmPersonal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(754, 429);
-            Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(button1);
             Controls.Add(radioButton2);
@@ -372,5 +405,10 @@
         private Button button2;
         private TextBox textBox4;
         private TextBox textBox3;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
     }
 }
