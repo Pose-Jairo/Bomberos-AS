@@ -4,6 +4,12 @@
     <Compile Update="Formularios\Consultas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\FrmABMpersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FrmAreaRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
