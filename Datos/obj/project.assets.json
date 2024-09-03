@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\RYZEN 3 3200g\\.nuget\\packages\\": {}
+    "C:\\Users\\LUK\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Bomberos A-S\\Datos\\Datos.csproj",
+      "projectUniqueName": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Datos\\Datos.csproj",
       "projectName": "Datos",
-      "projectPath": "F:\\Bomberos A-S\\Datos\\Datos.csproj",
-      "packagesPath": "C:\\Users\\RYZEN 3 3200g\\.nuget\\packages\\",
-      "outputPath": "F:\\Bomberos A-S\\Datos\\obj\\",
+      "projectPath": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Datos\\Datos.csproj",
+      "packagesPath": "C:\\Users\\LUK\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Datos\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\RYZEN 3 3200g\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LUK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,7 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {

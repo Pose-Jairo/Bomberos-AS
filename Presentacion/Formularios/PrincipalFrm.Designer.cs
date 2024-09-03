@@ -44,9 +44,11 @@
             pLogo = new Panel();
             panelContenedor = new Panel();
             tFecha = new System.Windows.Forms.Timer(components);
+            bindingSource1 = new BindingSource(components);
             pBarraSuperior.SuspendLayout();
             pContenedor.SuspendLayout();
             pFecha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
             // 
             // pBarraSuperior
@@ -228,6 +230,7 @@
             pBarraSuperior.ResumeLayout(false);
             pContenedor.ResumeLayout(false);
             pFecha.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ResumeLayout(false);
         }
 
@@ -247,5 +250,6 @@
         private Panel panel2;
         private Label lblHora;
         private System.Windows.Forms.Timer tFecha;
+        private BindingSource bindingSource1;
     }
 }

@@ -80,7 +80,7 @@
             groupBox1.Controls.Add(dataGridView1);
             groupBox1.Location = new Point(229, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(513, 405);
+            groupBox1.Size = new Size(529, 405);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Historial de registros";
@@ -89,7 +89,7 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView1.Location = new Point(11, 22);
+            dataGridView1.Location = new Point(19, 22);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(493, 377);
@@ -136,7 +136,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(754, 429);
+            ClientSize = new Size(770, 468);
             Controls.Add(label1);
             Controls.Add(groupBox1);
             Controls.Add(textBox1);
