@@ -27,24 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LUK\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\LUCAS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Logica\\Logica.csproj",
+      "projectUniqueName": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Logica\\Logica.csproj",
       "projectName": "Logica",
-      "projectPath": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Logica\\Logica.csproj",
-      "packagesPath": "C:\\Users\\LUK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Logica\\obj\\",
+      "projectPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Logica\\Logica.csproj",
+      "packagesPath": "C:\\Users\\LUCAS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Logica\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\LUK\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\LUCAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Datos\\Datos.csproj": {
-              "projectPath": "C:\\Users\\LUK\\Desktop\\Bomberos-AS\\Datos\\Datos.csproj"
+            "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj": {
+              "projectPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj"
             }
           }
         }
@@ -68,11 +63,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -94,7 +84,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
