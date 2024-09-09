@@ -28,182 +28,207 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pFormularios = new Panel();
-            panel5 = new Panel();
-            label5 = new Label();
-            dataGridView1 = new DataGridView();
-            label1 = new Label();
-            label4 = new Label();
-            panel1 = new Panel();
-            btnCargar = new Button();
-            label3 = new Label();
-            label2 = new Label();
-            lblActividad = new Label();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            pageSetupDialog1 = new PageSetupDialog();
-            pFormularios.SuspendLayout();
-            panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel1.SuspendLayout();
-            SuspendLayout();
+            this.pFormularios = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblActividad = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.tareas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pFormularios.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // pFormularios
             // 
-            pFormularios.BackColor = Color.FromArgb(208, 167, 173);
-            pFormularios.Controls.Add(panel5);
-            pFormularios.Controls.Add(label1);
-            pFormularios.Controls.Add(label4);
-            pFormularios.Controls.Add(panel1);
-            pFormularios.Dock = DockStyle.Fill;
-            pFormularios.Location = new Point(0, 0);
-            pFormularios.Name = "pFormularios";
-            pFormularios.Size = new Size(950, 500);
-            pFormularios.TabIndex = 3;
+            this.pFormularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(167)))), ((int)(((byte)(173)))));
+            this.pFormularios.Controls.Add(this.panel5);
+            this.pFormularios.Controls.Add(this.label1);
+            this.pFormularios.Controls.Add(this.label4);
+            this.pFormularios.Controls.Add(this.panel1);
+            this.pFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pFormularios.Location = new System.Drawing.Point(0, 0);
+            this.pFormularios.Name = "pFormularios";
+            this.pFormularios.Size = new System.Drawing.Size(885, 542);
+            this.pFormularios.TabIndex = 3;
+            this.pFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.pFormularios_Paint);
             // 
             // panel5
             // 
-            panel5.Controls.Add(label5);
-            panel5.Controls.Add(dataGridView1);
-            panel5.Location = new Point(79, 274);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(752, 184);
-            panel5.TabIndex = 9;
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.dataGridView1);
+            this.panel5.Location = new System.Drawing.Point(79, 274);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(689, 184);
+            this.panel5.TabIndex = 9;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(9, 18);
-            label5.Name = "label5";
-            label5.Size = new Size(173, 19);
-            label5.TabIndex = 8;
-            label5.Text = "Bienvenido {Nombre}";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(9, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(173, 19);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Bienvenido {Nombre}";
             // 
             // dataGridView1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 63);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(746, 115);
-            dataGridView1.TabIndex = 7;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tareas,
+            this.Estado,
+            this.Fecha});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 63);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(574, 115);
+            this.dataGridView1.TabIndex = 7;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(309, 241);
-            label1.Name = "label1";
-            label1.Size = new Size(292, 19);
-            label1.TabIndex = 8;
-            label1.Text = "Historico de actividades del bombero";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(309, 241);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(292, 19);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Historico de actividades del bombero";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(345, 9);
-            label4.Name = "label4";
-            label4.Size = new Size(204, 19);
-            label4.TabIndex = 6;
-            label4.Text = "Cargar Tareas Realizadas";
-            label4.Click += label4_Click;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(345, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(204, 19);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Cargar Tareas Realizadas";
             // 
             // panel1
             // 
-            panel1.Controls.Add(btnCargar);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(lblActividad);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
-            panel1.Location = new Point(79, 45);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(752, 180);
-            panel1.TabIndex = 0;
+            this.panel1.Controls.Add(this.btnCargar);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblActividad);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Location = new System.Drawing.Point(79, 45);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(689, 179);
+            this.panel1.TabIndex = 0;
             // 
             // btnCargar
             // 
-            btnCargar.BackColor = Color.FromArgb(128, 255, 128);
-            btnCargar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCargar.Location = new Point(676, 149);
-            btnCargar.Name = "btnCargar";
-            btnCargar.Size = new Size(73, 28);
-            btnCargar.TabIndex = 6;
-            btnCargar.Text = "Cargar";
-            btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnCargar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCargar.Location = new System.Drawing.Point(504, 149);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(73, 23);
+            this.btnCargar.TabIndex = 6;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(502, 44);
-            label3.Name = "label3";
-            label3.Size = new Size(116, 19);
-            label3.TabIndex = 5;
-            label3.Text = "Fecha y Hora:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(249, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 19);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Fecha y Hora:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(14, 44);
-            label2.Name = "label2";
-            label2.Size = new Size(31, 19);
-            label2.TabIndex = 4;
-            label2.Text = "ID:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(14, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 19);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "ID:";
             // 
             // lblActividad
             // 
-            lblActividad.AutoSize = true;
-            lblActividad.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblActividad.Location = new Point(14, 120);
-            lblActividad.Name = "lblActividad";
-            lblActividad.Size = new Size(181, 19);
-            lblActividad.TabIndex = 3;
-            lblActividad.Text = "Detalle de la Actividad:";
+            this.lblActividad.AutoSize = true;
+            this.lblActividad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblActividad.Location = new System.Drawing.Point(14, 120);
+            this.lblActividad.Name = "lblActividad";
+            this.lblActividad.Size = new System.Drawing.Size(181, 19);
+            this.lblActividad.TabIndex = 3;
+            this.lblActividad.Text = "Detalle de la Actividad:";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(14, 149);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(641, 23);
-            textBox3.TabIndex = 2;
+            this.textBox3.Location = new System.Drawing.Point(14, 149);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(484, 23);
+            this.textBox3.TabIndex = 2;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(502, 72);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(153, 23);
-            textBox2.TabIndex = 1;
+            this.textBox2.Location = new System.Drawing.Point(249, 72);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(153, 23);
+            this.textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(14, 72);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(148, 23);
-            textBox1.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(14, 72);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(148, 23);
+            this.textBox1.TabIndex = 0;
+            // 
+            // tareas
+            // 
+            this.tareas.HeaderText = "Tarea";
+            this.tareas.Name = "tareas";
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
             // 
             // Consultas
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(950, 500);
-            Controls.Add(pFormularios);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "Consultas";
-            Text = "Consultas";
-            pFormularios.ResumeLayout(false);
-            pFormularios.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(885, 542);
+            this.Controls.Add(this.pFormularios);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Consultas";
+            this.Text = "Consultas";
+            this.pFormularios.ResumeLayout(false);
+            this.pFormularios.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -223,5 +248,8 @@
         private TextBox textBox3;
         private TextBox textBox2;
         private TextBox textBox1;
+        private DataGridViewTextBoxColumn tareas;
+        private DataGridViewTextBoxColumn Estado;
+        private DataGridViewTextBoxColumn Fecha;
     }
 }
