@@ -28,90 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvCalendario = new DataGridView();
-            ColumnPersonal = new DataGridViewTextBoxColumn();
+            dgvCalificacion = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            label1 = new Label();
+            btnImprimir = new Button();
             button1 = new Button();
             button2 = new Button();
-            label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvCalendario).BeginInit();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvCalificacion).BeginInit();
             SuspendLayout();
             // 
-            // dgvCalendario
+            // dgvCalificacion
             // 
-            dgvCalendario.AllowUserToAddRows = false;
-            dgvCalendario.AllowUserToDeleteRows = false;
-            dgvCalendario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvCalendario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCalendario.Columns.AddRange(new DataGridViewColumn[] { ColumnPersonal });
-            dgvCalendario.Location = new Point(12, 56);
-            dgvCalendario.Name = "dgvCalendario";
-            dgvCalendario.RowHeadersVisible = false;
-            dgvCalendario.RowTemplate.Height = 25;
-            dgvCalendario.Size = new Size(746, 337);
-            dgvCalendario.TabIndex = 0;
+            dgvCalificacion.AllowUserToAddRows = false;
+            dgvCalificacion.AllowUserToDeleteRows = false;
+            dgvCalificacion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvCalificacion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCalificacion.Columns.AddRange(new DataGridViewColumn[] { Column1 });
+            dgvCalificacion.Location = new Point(12, 31);
+            dgvCalificacion.Name = "dgvCalificacion";
+            dgvCalificacion.RowHeadersVisible = false;
+            dgvCalificacion.RowTemplate.Height = 25;
+            dgvCalificacion.Size = new Size(746, 254);
+            dgvCalificacion.TabIndex = 0;
             // 
-            // ColumnPersonal
+            // Column1
             // 
-            ColumnPersonal.HeaderText = "Nombre del Personal";
-            ColumnPersonal.MaxInputLength = 100;
-            ColumnPersonal.Name = "ColumnPersonal";
-            ColumnPersonal.Resizable = DataGridViewTriState.False;
-            ColumnPersonal.Width = 131;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(606, 399);
-            button1.Name = "button1";
-            button1.Size = new Size(152, 57);
-            button1.TabIndex = 1;
-            button1.Text = ">>IMPRIMIR<<";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(12, 399);
-            button2.Name = "button2";
-            button2.Size = new Size(152, 57);
-            button2.TabIndex = 2;
-            button2.Text = "Volver";
-            button2.UseVisualStyleBackColor = true;
+            Column1.HeaderText = "Nombre de Personal";
+            Column1.Name = "Column1";
+            Column1.Width = 128;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(12, 36);
+            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(12, 8);
             label1.Name = "label1";
-            label1.Size = new Size(323, 17);
-            label1.TabIndex = 3;
-            label1.Text = "Lista de la asistencias y puntuaciones del personal:";
+            label1.Size = new Size(167, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Tabla de calificaciones:";
+            // 
+            // btnImprimir
+            // 
+            btnImprimir.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnImprimir.Location = new Point(606, 407);
+            btnImprimir.Name = "btnImprimir";
+            btnImprimir.Size = new Size(152, 49);
+            btnImprimir.TabIndex = 2;
+            btnImprimir.Text = ">>Imprimir<<";
+            btnImprimir.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(12, 407);
+            button1.Name = "button1";
+            button1.Size = new Size(152, 49);
+            button1.TabIndex = 3;
+            button1.Text = "Cancelar";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(12, 291);
+            button2.Name = "button2";
+            button2.Size = new Size(152, 33);
+            button2.TabIndex = 4;
+            button2.Text = "Recargar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(170, 300);
+            label2.Name = "label2";
+            label2.Size = new Size(267, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Volver a cargar la grilla (se perderan las ediciones)";
             // 
             // FrmCalificaciones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(770, 468);
-            Controls.Add(label1);
+            Controls.Add(label2);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(dgvCalendario);
+            Controls.Add(btnImprimir);
+            Controls.Add(label1);
+            Controls.Add(dgvCalificacion);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmCalificaciones";
             Text = "FrmCalificaciones";
             Load += FrmCalificaciones_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvCalendario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCalificacion).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dgvCalendario;
-        private DataGridViewTextBoxColumn ColumnPersonal;
+        private DataGridView dgvCalificacion;
+        private DataGridViewTextBoxColumn Column1;
+        private Label label1;
+        private Button btnImprimir;
         private Button button1;
         private Button button2;
-        private Label label1;
+        private Label label2;
     }
 }

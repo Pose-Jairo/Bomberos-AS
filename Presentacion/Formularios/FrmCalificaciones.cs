@@ -19,15 +19,14 @@ namespace Presentacion.Formularios
 
         private void FrmCalificaciones_Load(object sender, EventArgs e)
         {
-            for (int i = 1; i < 32; i++)
+            for(int i = 1; i < 32; i++)
             {
                 string nomcolumn = Convert.ToString(i);
-                dgvCalendario.Columns.Add("columna"+i,nomcolumn);
+                dgvCalificacion.Columns.Add("columna" + i, nomcolumn);
             }
 
-            dgvCalendario.Columns.Add("columnaAsistencia", "Total Horas");
-            dgvCalendario.Columns.Add("columnaCalificacion", "Calificacion Final");
-
+            dgvCalificacion.Columns.Add("columnaAsistencia", "Total Horas");
+            dgvCalificacion.Columns.Add("columnaCalificacion", "Calificacion Final");
         }
     }
 }
