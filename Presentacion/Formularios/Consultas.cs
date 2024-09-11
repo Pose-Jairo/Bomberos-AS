@@ -21,5 +21,10 @@ namespace Presentacion.Formularios
         {
 
         }
+
+        private void pFormularios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

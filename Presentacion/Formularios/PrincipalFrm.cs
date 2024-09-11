@@ -17,9 +17,18 @@ namespace Presentacion.Formularios
             InitializeComponent();
         }
 
+        private Image imgMaximizar;
+        private Image imgMinimizar;
+
         private void PrincipalFrm_Load(object sender, EventArgs e)
         {
+            imgMaximizar = Properties.Resources.icon_maximizar;
+            imgMinimizar = Properties.Resources.icon_restaurar;
+
+            this.Bounds = Screen.PrimaryScreen.WorkingArea;
             OpenFormHijo(new FrmMain());
+            btnInicio.BackColor = Color.FromArgb(140, 11, 32);
+            BotonAnterior = btnInicio;
         }
 
         private void tFecha_Tick(object sender, EventArgs e)
@@ -71,5 +80,40 @@ namespace Presentacion.Formularios
             FormActivo.Show();
         }
 
+        private void AccionBotonesBarra(object sender, EventArgs e)
+        {
+            var panel = ((Panel)sender);
+
+            switch (panel.Name)
+            {
+                case "pCerrar":
+                    Application.Exit();
+                    break;
+                case "pMaxMin":
+                    if (pMaxMin.BackgroundImage == imgMinimizar)
+                   { 
+                    this.Size = new Size(800, 600);
+
+                    int pantallaAncho = Screen.PrimaryScreen.Bounds.Width;
+                    int pantallaAlto = Screen.PrimaryScreen.Bounds.Height;
+
+                    int formX = (pantallaAncho - this.Width) / 2;
+                    int formY = (pantallaAlto - this.Height) / 2;
+
+                    this.Location = new Point(formX, formY);
+
+                        pMaxMin.BackgroundImage = imgMaximizar;
+                   }
+                    else
+                    {
+                        this.Bounds = Screen.PrimaryScreen.WorkingArea;
+                        pMaxMin.BackgroundImage = imgMinimizar;
+                    }
+                    break;
+                case "pMin":
+                    this.WindowState = FormWindowState.Minimized;
+                    break;
+            }
+        }
     }
 }

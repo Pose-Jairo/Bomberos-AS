@@ -16,10 +16,7 @@
       },
       "Datos/1.0.0": {
         "runtime": {
-          "Datos.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Datos.dll": {}
         }
       },
       "Logica/1.0.0": {
@@ -27,10 +24,7 @@
           "Datos": "1.0.0"
         },
         "runtime": {
-          "Logica.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Logica.dll": {}
         }
       }
     }
