@@ -28,71 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
+            gbSuperior = new GroupBox();
+            pIzquierdo = new Panel();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
-            groupBox2 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
+            pDerecha = new Panel();
+            gbDerecha = new GroupBox();
+            btnFiltrar = new Button();
             textBox2 = new TextBox();
-            button1 = new Button();
+            comboBox1 = new ComboBox();
+            textBox1 = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             groupBox3 = new GroupBox();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            comboBox2 = new ComboBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            groupBox4 = new GroupBox();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
+            btnVolverBomberos = new Button();
+            gbAcciones = new GroupBox();
             radioButton5 = new RadioButton();
-            button2 = new Button();
-            button3 = new Button();
-            groupBox1.SuspendLayout();
+            radioButton4 = new RadioButton();
+            radioButton3 = new RadioButton();
+            btnEjecutar = new Button();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            comboBox2 = new ComboBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            pSuperior = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            gbSuperior.SuspendLayout();
+            pIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            groupBox2.SuspendLayout();
+            pDerecha.SuspendLayout();
+            gbDerecha.SuspendLayout();
             groupBox3.SuspendLayout();
-            groupBox4.SuspendLayout();
+            gbAcciones.SuspendLayout();
+            pSuperior.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // groupBox1
+            // gbSuperior
             // 
-            groupBox1.Controls.Add(groupBox2);
-            groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Location = new Point(12, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(746, 256);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Lista de Personal";
+            gbSuperior.Controls.Add(pIzquierdo);
+            gbSuperior.Controls.Add(pDerecha);
+            gbSuperior.Dock = DockStyle.Fill;
+            gbSuperior.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            gbSuperior.ForeColor = Color.White;
+            gbSuperior.Location = new Point(5, 5);
+            gbSuperior.Name = "gbSuperior";
+            gbSuperior.Padding = new Padding(5);
+            gbSuperior.Size = new Size(790, 336);
+            gbSuperior.TabIndex = 0;
+            gbSuperior.TabStop = false;
+            gbSuperior.Text = "Lista de Personal";
+            // 
+            // pIzquierdo
+            // 
+            pIzquierdo.Controls.Add(dataGridView1);
+            pIzquierdo.Dock = DockStyle.Fill;
+            pIzquierdo.Location = new Point(5, 20);
+            pIzquierdo.Name = "pIzquierdo";
+            pIzquierdo.Padding = new Padding(5);
+            pIzquierdo.Size = new Size(505, 311);
+            pIzquierdo.TabIndex = 2;
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = Color.FromArgb(176, 140, 145);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView1.Location = new Point(6, 22);
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(5, 5);
+            dataGridView1.Margin = new Padding(5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(414, 228);
+            dataGridView1.Size = new Size(495, 301);
             dataGridView1.TabIndex = 0;
             // 
             // Column1
             // 
-            Column1.HeaderText = "Cod:";
+            Column1.HeaderText = "Codigo:";
             Column1.Name = "Column1";
-            Column1.Width = 50;
             // 
             // Column2
             // 
@@ -113,88 +140,117 @@
             // 
             Column5.HeaderText = "Permisos";
             Column5.Name = "Column5";
-            Column5.Width = 60;
             // 
-            // groupBox2
+            // pDerecha
             // 
-            groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(textBox2);
-            groupBox2.Controls.Add(comboBox1);
-            groupBox2.Controls.Add(textBox1);
-            groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Location = new Point(426, 39);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(307, 186);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Filtros de Busqueda:";
+            pDerecha.Controls.Add(gbDerecha);
+            pDerecha.Dock = DockStyle.Right;
+            pDerecha.Location = new Point(510, 20);
+            pDerecha.Name = "pDerecha";
+            pDerecha.Padding = new Padding(5);
+            pDerecha.Size = new Size(275, 311);
+            pDerecha.TabIndex = 2;
             // 
-            // label1
+            // gbDerecha
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(87, 63);
-            label1.Name = "label1";
-            label1.Size = new Size(65, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Por Rango:";
+            gbDerecha.Controls.Add(btnFiltrar);
+            gbDerecha.Controls.Add(textBox2);
+            gbDerecha.Controls.Add(comboBox1);
+            gbDerecha.Controls.Add(textBox1);
+            gbDerecha.Controls.Add(label3);
+            gbDerecha.Controls.Add(label2);
+            gbDerecha.Controls.Add(label1);
+            gbDerecha.Dock = DockStyle.Fill;
+            gbDerecha.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            gbDerecha.ForeColor = Color.White;
+            gbDerecha.Location = new Point(5, 5);
+            gbDerecha.Name = "gbDerecha";
+            gbDerecha.Padding = new Padding(0);
+            gbDerecha.Size = new Size(265, 301);
+            gbDerecha.TabIndex = 1;
+            gbDerecha.TabStop = false;
+            gbDerecha.Text = "Filtros de Busqueda:";
             // 
-            // label2
+            // btnFiltrar
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(87, 31);
-            label2.Name = "label2";
-            label2.Size = new Size(70, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Por Codigo:";
+            btnFiltrar.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            btnFiltrar.BackColor = Color.DarkGreen;
+            btnFiltrar.FlatStyle = FlatStyle.Popup;
+            btnFiltrar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnFiltrar.Location = new Point(86, 218);
+            btnFiltrar.Name = "btnFiltrar";
+            btnFiltrar.Size = new Size(113, 39);
+            btnFiltrar.TabIndex = 6;
+            btnFiltrar.Text = "Filtrar";
+            btnFiltrar.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.FromArgb(176, 140, 145);
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.ForeColor = Color.White;
+            textBox2.Location = new Point(146, 136);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 19);
+            textBox2.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            comboBox1.BackColor = Color.FromArgb(176, 140, 145);
+            comboBox1.FlatStyle = FlatStyle.Flat;
+            comboBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.ForeColor = Color.White;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Oficial", "SubOficial", "Bombero", "Cadete" });
+            comboBox1.Location = new Point(146, 90);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(100, 28);
+            comboBox1.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(176, 140, 145);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.ForeColor = Color.White;
+            textBox1.Location = new Point(146, 46);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 19);
+            textBox1.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(22, 94);
+            label3.Location = new Point(18, 139);
             label3.Name = "label3";
-            label3.Size = new Size(130, 15);
+            label3.Size = new Size(122, 16);
             label3.TabIndex = 2;
-            label3.Text = "Por Nombre Y apellido:";
+            label3.Text = "Nombre y Apellido:";
             // 
-            // textBox1
+            // label2
             // 
-            textBox1.Location = new Point(158, 28);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            label2.AutoSize = true;
+            label2.Location = new Point(18, 49);
+            label2.Name = "label2";
+            label2.Size = new Size(54, 16);
+            label2.TabIndex = 1;
+            label2.Text = "Codigo:";
             // 
-            // comboBox1
+            // label1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Oficial", "SubOficial", "Bombero", "Cadete" });
-            comboBox1.Location = new Point(158, 60);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(100, 23);
-            comboBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(158, 92);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 5;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Gold;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(97, 132);
-            button1.Name = "button1";
-            button1.Size = new Size(119, 39);
-            button1.TabIndex = 6;
-            button1.Text = "Filtrar";
-            button1.UseVisualStyleBackColor = false;
+            label1.AutoSize = true;
+            label1.Location = new Point(18, 93);
+            label1.Name = "label1";
+            label1.Size = new Size(51, 16);
+            label1.TabIndex = 0;
+            label1.Text = "Rango:";
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(button3);
+            groupBox3.Controls.Add(btnVolverBomberos);
+            groupBox3.Controls.Add(gbAcciones);
+            groupBox3.Controls.Add(btnEjecutar);
             groupBox3.Controls.Add(radioButton2);
             groupBox3.Controls.Add(radioButton1);
             groupBox3.Controls.Add(comboBox2);
@@ -204,136 +260,50 @@
             groupBox3.Controls.Add(label6);
             groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(label4);
-            groupBox3.Location = new Point(12, 274);
+            groupBox3.Dock = DockStyle.Fill;
+            groupBox3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox3.ForeColor = Color.White;
+            groupBox3.Location = new Point(5, 5);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(420, 182);
+            groupBox3.Size = new Size(790, 244);
             groupBox3.TabIndex = 1;
             groupBox3.TabStop = false;
             groupBox3.Text = "Registrar nuevo Personal:";
             // 
-            // label4
+            // btnVolverBomberos
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(15, 22);
-            label4.Name = "label4";
-            label4.Size = new Size(54, 15);
-            label4.TabIndex = 0;
-            label4.Text = "Nombre:";
+            btnVolverBomberos.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnVolverBomberos.BackColor = Color.Red;
+            btnVolverBomberos.FlatStyle = FlatStyle.Popup;
+            btnVolverBomberos.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVolverBomberos.Location = new Point(641, 202);
+            btnVolverBomberos.Name = "btnVolverBomberos";
+            btnVolverBomberos.Size = new Size(142, 35);
+            btnVolverBomberos.TabIndex = 3;
+            btnVolverBomberos.Text = "Volver";
+            btnVolverBomberos.UseVisualStyleBackColor = false;
+            btnVolverBomberos.Click += SeleccionButtons;
             // 
-            // label5
+            // gbAcciones
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(15, 63);
-            label5.Name = "label5";
-            label5.Size = new Size(54, 15);
-            label5.TabIndex = 1;
-            label5.Text = "Apellido:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(15, 108);
-            label6.Name = "label6";
-            label6.Size = new Size(44, 15);
-            label6.TabIndex = 2;
-            label6.Text = "Rango:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(229, 25);
-            label7.Name = "label7";
-            label7.Size = new Size(158, 15);
-            label7.TabIndex = 3;
-            label7.Text = "Permisos de Administracion:";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(75, 22);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 4;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(75, 60);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 5;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Oficial", "SubOficial", "Bombero", "Cadete" });
-            comboBox2.Location = new Point(75, 105);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(100, 23);
-            comboBox2.TabIndex = 6;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(313, 43);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(34, 19);
-            radioButton1.TabIndex = 7;
-            radioButton1.Text = "SI";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Checked = true;
-            radioButton2.Location = new Point(229, 43);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(43, 19);
-            radioButton2.TabIndex = 8;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "NO";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(radioButton5);
-            groupBox4.Controls.Add(radioButton4);
-            groupBox4.Controls.Add(radioButton3);
-            groupBox4.Location = new Point(496, 279);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(200, 123);
-            groupBox4.TabIndex = 2;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Selecciona un Metodo:";
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoSize = true;
-            radioButton3.Checked = true;
-            radioButton3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            radioButton3.Location = new Point(22, 25);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(154, 24);
-            radioButton3.TabIndex = 0;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Agregar Registros";
-            radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            radioButton4.AutoSize = true;
-            radioButton4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            radioButton4.Location = new Point(22, 55);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(160, 24);
-            radioButton4.TabIndex = 1;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Modificar registros";
-            radioButton4.UseVisualStyleBackColor = true;
+            gbAcciones.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            gbAcciones.Controls.Add(radioButton5);
+            gbAcciones.Controls.Add(radioButton4);
+            gbAcciones.Controls.Add(radioButton3);
+            gbAcciones.ForeColor = Color.White;
+            gbAcciones.Location = new Point(399, 14);
+            gbAcciones.Name = "gbAcciones";
+            gbAcciones.Size = new Size(200, 223);
+            gbAcciones.TabIndex = 2;
+            gbAcciones.TabStop = false;
+            gbAcciones.Text = "Selecciona un Metodo:";
             // 
             // radioButton5
             // 
+            radioButton5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             radioButton5.AutoSize = true;
             radioButton5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            radioButton5.Location = new Point(22, 85);
+            radioButton5.Location = new Point(22, 136);
             radioButton5.Name = "radioButton5";
             radioButton5.Size = new Size(154, 24);
             radioButton5.TabIndex = 2;
@@ -341,64 +311,210 @@
             radioButton5.Text = "Eliminar Registros";
             radioButton5.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // radioButton4
             // 
-            button2.BackColor = Color.MediumAquamarine;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(616, 421);
-            button2.Name = "button2";
-            button2.Size = new Size(142, 35);
-            button2.TabIndex = 3;
-            button2.Text = "Volver";
-            button2.UseVisualStyleBackColor = false;
+            radioButton4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            radioButton4.AutoSize = true;
+            radioButton4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            radioButton4.Location = new Point(22, 106);
+            radioButton4.Name = "radioButton4";
+            radioButton4.Size = new Size(160, 24);
+            radioButton4.TabIndex = 1;
+            radioButton4.TabStop = true;
+            radioButton4.Text = "Modificar registros";
+            radioButton4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // radioButton3
             // 
-            button3.BackColor = Color.LimeGreen;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(257, 128);
-            button3.Name = "button3";
-            button3.Size = new Size(157, 48);
-            button3.TabIndex = 9;
-            button3.Text = "Ejecutar";
-            button3.UseVisualStyleBackColor = false;
+            radioButton3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            radioButton3.AutoSize = true;
+            radioButton3.Checked = true;
+            radioButton3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            radioButton3.Location = new Point(22, 76);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(154, 24);
+            radioButton3.TabIndex = 0;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Agregar Registros";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // btnEjecutar
+            // 
+            btnEjecutar.Anchor = AnchorStyles.Left;
+            btnEjecutar.BackColor = Color.Green;
+            btnEjecutar.FlatStyle = FlatStyle.Popup;
+            btnEjecutar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEjecutar.Location = new Point(201, 127);
+            btnEjecutar.Name = "btnEjecutar";
+            btnEjecutar.Size = new Size(157, 48);
+            btnEjecutar.TabIndex = 9;
+            btnEjecutar.Text = "Ejecutar";
+            btnEjecutar.UseVisualStyleBackColor = false;
+            // 
+            // radioButton2
+            // 
+            radioButton2.Anchor = AnchorStyles.Left;
+            radioButton2.AutoSize = true;
+            radioButton2.Checked = true;
+            radioButton2.Location = new Point(201, 90);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(45, 20);
+            radioButton2.TabIndex = 8;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "NO";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            radioButton1.Anchor = AnchorStyles.Left;
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(285, 90);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(37, 20);
+            radioButton1.TabIndex = 7;
+            radioButton1.Text = "SI";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            comboBox2.Anchor = AnchorStyles.Left;
+            comboBox2.BackColor = Color.FromArgb(176, 140, 145);
+            comboBox2.FlatStyle = FlatStyle.Flat;
+            comboBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox2.ForeColor = Color.White;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Oficial", "SubOficial", "Bombero", "Cadete" });
+            comboBox2.Location = new Point(75, 152);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(100, 28);
+            comboBox2.TabIndex = 6;
+            // 
+            // textBox4
+            // 
+            textBox4.Anchor = AnchorStyles.Left;
+            textBox4.BackColor = Color.FromArgb(176, 140, 145);
+            textBox4.BorderStyle = BorderStyle.None;
+            textBox4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox4.ForeColor = Color.White;
+            textBox4.Location = new Point(75, 107);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(100, 19);
+            textBox4.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            textBox3.Anchor = AnchorStyles.Left;
+            textBox3.BackColor = Color.FromArgb(176, 140, 145);
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.ForeColor = Color.White;
+            textBox3.Location = new Point(75, 69);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(100, 19);
+            textBox3.TabIndex = 4;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Left;
+            label7.AutoSize = true;
+            label7.Location = new Point(201, 72);
+            label7.Name = "label7";
+            label7.Size = new Size(177, 16);
+            label7.TabIndex = 3;
+            label7.Text = "Permisos de Administracion:";
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Left;
+            label6.AutoSize = true;
+            label6.Location = new Point(15, 155);
+            label6.Name = "label6";
+            label6.Size = new Size(51, 16);
+            label6.TabIndex = 2;
+            label6.Text = "Rango:";
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Left;
+            label5.AutoSize = true;
+            label5.Location = new Point(15, 110);
+            label5.Name = "label5";
+            label5.Size = new Size(60, 16);
+            label5.TabIndex = 1;
+            label5.Text = "Apellido:";
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Left;
+            label4.AutoSize = true;
+            label4.Location = new Point(15, 69);
+            label4.Name = "label4";
+            label4.Size = new Size(59, 16);
+            label4.TabIndex = 0;
+            label4.Text = "Nombre:";
+            // 
+            // pSuperior
+            // 
+            pSuperior.Controls.Add(gbSuperior);
+            pSuperior.Dock = DockStyle.Top;
+            pSuperior.Location = new Point(0, 0);
+            pSuperior.Name = "pSuperior";
+            pSuperior.Padding = new Padding(5);
+            pSuperior.Size = new Size(800, 346);
+            pSuperior.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(panel3);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 346);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(800, 254);
+            panel2.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(groupBox3);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Padding = new Padding(5);
+            panel3.Size = new Size(800, 254);
+            panel3.TabIndex = 4;
             // 
             // FrmABMpersonal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(770, 468);
-            Controls.Add(button2);
-            Controls.Add(groupBox4);
-            Controls.Add(groupBox3);
-            Controls.Add(groupBox1);
+            BackColor = Color.FromArgb(144, 93, 101);
+            ClientSize = new Size(800, 600);
+            Controls.Add(panel2);
+            Controls.Add(pSuperior);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmABMpersonal";
             Text = "FrmABMpersonal";
-            groupBox1.ResumeLayout(false);
+            gbSuperior.ResumeLayout(false);
+            pIzquierdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
+            pDerecha.ResumeLayout(false);
+            gbDerecha.ResumeLayout(false);
+            gbDerecha.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
+            gbAcciones.ResumeLayout(false);
+            gbAcciones.PerformLayout();
+            pSuperior.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
+        private GroupBox gbSuperior;
+        private GroupBox gbDerecha;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private Button button1;
+        private Button btnFiltrar;
         private TextBox textBox2;
         private ComboBox comboBox1;
         private TextBox textBox1;
@@ -415,11 +531,21 @@
         private Label label6;
         private Label label5;
         private Label label4;
-        private GroupBox groupBox4;
-        private Button button3;
+        private GroupBox gbAcciones;
+        private Button btnEjecutar;
         private RadioButton radioButton5;
         private RadioButton radioButton4;
         private RadioButton radioButton3;
-        private Button button2;
+        private Button btnVolverBomberos;
+        private Panel pSuperior;
+        private Panel panel2;
+        private Panel panel3;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private Panel pIzquierdo;
+        private Panel pDerecha;
     }
 }

@@ -19,7 +19,7 @@ namespace Presentacion.Formularios
 
         private void FrmCalificaciones_Load(object sender, EventArgs e)
         {
-            for(int i = 1; i < 32; i++)
+            for (int i = 1; i < 32; i++)
             {
                 string nomcolumn = Convert.ToString(i);
                 dgvCalificacion.Columns.Add("columna" + i, nomcolumn);
@@ -27,6 +27,12 @@ namespace Presentacion.Formularios
 
             dgvCalificacion.Columns.Add("columnaAsistencia", "Total Horas");
             dgvCalificacion.Columns.Add("columnaCalificacion", "Calificacion Final");
+        }
+
+        private void SeleccionButtons(object sender, EventArgs e)
+        {
+            var button = ((Button)sender);
+            PrincipalFrm.Instancia.AbrirFormulario(button.Name);
         }
     }
 }

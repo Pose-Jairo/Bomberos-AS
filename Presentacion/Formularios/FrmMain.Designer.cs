@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             btnEntrada = new Button();
             btnSalida = new Button();
             txtCodigo = new TextBox();
@@ -41,6 +45,7 @@
             lblCodigo = new Label();
             pHistorial = new Panel();
             pEncabezado = new Panel();
+            btnEmergencia = new Button();
             gbHistorial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvHistorial).BeginInit();
             pHistorial.SuspendLayout();
@@ -51,13 +56,13 @@
             // 
             btnEntrada.Anchor = AnchorStyles.None;
             btnEntrada.BackColor = Color.Green;
+            btnEntrada.Cursor = Cursors.Hand;
             btnEntrada.FlatStyle = FlatStyle.Popup;
             btnEntrada.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnEntrada.ForeColor = Color.White;
-            btnEntrada.Location = new Point(399, 201);
-            btnEntrada.Margin = new Padding(3, 4, 3, 4);
+            btnEntrada.Location = new Point(348, 151);
             btnEntrada.Name = "btnEntrada";
-            btnEntrada.Size = new Size(200, 60);
+            btnEntrada.Size = new Size(175, 45);
             btnEntrada.TabIndex = 0;
             btnEntrada.Text = ">> Entrada >>";
             btnEntrada.UseVisualStyleBackColor = false;
@@ -66,13 +71,13 @@
             // 
             btnSalida.Anchor = AnchorStyles.None;
             btnSalida.BackColor = Color.Red;
+            btnSalida.Cursor = Cursors.Hand;
             btnSalida.FlatStyle = FlatStyle.Popup;
             btnSalida.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnSalida.ForeColor = Color.White;
-            btnSalida.Location = new Point(610, 201);
-            btnSalida.Margin = new Padding(3, 4, 3, 4);
+            btnSalida.Location = new Point(533, 151);
             btnSalida.Name = "btnSalida";
-            btnSalida.Size = new Size(200, 60);
+            btnSalida.Size = new Size(175, 45);
             btnSalida.TabIndex = 1;
             btnSalida.Text = "<< Salida <<";
             btnSalida.UseVisualStyleBackColor = false;
@@ -80,12 +85,17 @@
             // txtCodigo
             // 
             txtCodigo.Anchor = AnchorStyles.None;
-            txtCodigo.Location = new Point(399, 123);
-            txtCodigo.Margin = new Padding(3, 4, 3, 4);
+            txtCodigo.BackColor = Color.FromArgb(176, 140, 145);
+            txtCodigo.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigo.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCodigo.ForeColor = Color.White;
+            txtCodigo.Location = new Point(348, 92);
+            txtCodigo.MaxLength = 3;
             txtCodigo.Multiline = true;
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(411, 60);
+            txtCodigo.Size = new Size(360, 46);
             txtCodigo.TabIndex = 2;
+            txtCodigo.TextAlign = HorizontalAlignment.Center;
             // 
             // gbHistorial
             // 
@@ -94,10 +104,9 @@
             gbHistorial.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             gbHistorial.ForeColor = Color.White;
             gbHistorial.Location = new Point(0, 0);
-            gbHistorial.Margin = new Padding(3, 4, 3, 4);
             gbHistorial.Name = "gbHistorial";
-            gbHistorial.Padding = new Padding(10);
-            gbHistorial.Size = new Size(1211, 411);
+            gbHistorial.Padding = new Padding(9, 8, 9, 8);
+            gbHistorial.Size = new Size(1059, 308);
             gbHistorial.TabIndex = 3;
             gbHistorial.TabStop = false;
             gbHistorial.Text = "Historial de registros";
@@ -108,24 +117,52 @@
             dgvHistorial.AllowUserToDeleteRows = false;
             dgvHistorial.AllowUserToResizeColumns = false;
             dgvHistorial.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(176, 140, 145);
+            dgvHistorial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvHistorial.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvHistorial.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvHistorial.BackgroundColor = Color.White;
+            dgvHistorial.BackgroundColor = Color.FromArgb(176, 140, 145);
+            dgvHistorial.BorderStyle = BorderStyle.None;
+            dgvHistorial.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(176, 140, 145);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvHistorial.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvHistorial.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(176, 140, 145);
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvHistorial.DefaultCellStyle = dataGridViewCellStyle3;
             dgvHistorial.Dock = DockStyle.Fill;
-            dgvHistorial.Location = new Point(10, 33);
-            dgvHistorial.Margin = new Padding(3, 4, 3, 4);
+            dgvHistorial.Location = new Point(9, 27);
+            dgvHistorial.MultiSelect = false;
             dgvHistorial.Name = "dgvHistorial";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(176, 140, 145);
+            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvHistorial.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvHistorial.RowHeadersVisible = false;
             dgvHistorial.RowHeadersWidth = 51;
             dgvHistorial.RowTemplate.Height = 25;
-            dgvHistorial.Size = new Size(1191, 368);
+            dgvHistorial.Size = new Size(1041, 273);
             dgvHistorial.TabIndex = 0;
             // 
             // Column1
             // 
-            Column1.HeaderText = "Cod:";
+            Column1.HeaderText = "Codigo:";
             Column1.MaxInputLength = 3;
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
@@ -160,9 +197,9 @@
             lblCodigo.AutoSize = true;
             lblCodigo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCodigo.ForeColor = Color.White;
-            lblCodigo.Location = new Point(399, 94);
+            lblCodigo.Location = new Point(348, 70);
             lblCodigo.Name = "lblCodigo";
-            lblCodigo.Size = new Size(146, 25);
+            lblCodigo.Size = new Size(122, 20);
             lblCodigo.TabIndex = 4;
             lblCodigo.Text = "Identificación:";
             // 
@@ -170,35 +207,52 @@
             // 
             pHistorial.Controls.Add(gbHistorial);
             pHistorial.Dock = DockStyle.Fill;
-            pHistorial.Location = new Point(20, 304);
+            pHistorial.Location = new Point(18, 228);
+            pHistorial.Margin = new Padding(3, 2, 3, 2);
             pHistorial.Name = "pHistorial";
-            pHistorial.Size = new Size(1211, 411);
+            pHistorial.Size = new Size(1059, 308);
             pHistorial.TabIndex = 5;
             // 
             // pEncabezado
             // 
+            pEncabezado.Controls.Add(btnEmergencia);
             pEncabezado.Controls.Add(lblCodigo);
             pEncabezado.Controls.Add(btnEntrada);
             pEncabezado.Controls.Add(btnSalida);
             pEncabezado.Controls.Add(txtCodigo);
             pEncabezado.Dock = DockStyle.Top;
-            pEncabezado.Location = new Point(20, 20);
+            pEncabezado.Location = new Point(18, 15);
+            pEncabezado.Margin = new Padding(3, 2, 3, 2);
             pEncabezado.Name = "pEncabezado";
-            pEncabezado.Size = new Size(1211, 284);
+            pEncabezado.Size = new Size(1059, 213);
             pEncabezado.TabIndex = 6;
+            // 
+            // btnEmergencia
+            // 
+            btnEmergencia.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnEmergencia.BackColor = Color.Red;
+            btnEmergencia.Cursor = Cursors.Hand;
+            btnEmergencia.FlatStyle = FlatStyle.Popup;
+            btnEmergencia.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEmergencia.ForeColor = Color.White;
+            btnEmergencia.Location = new Point(881, 162);
+            btnEmergencia.Name = "btnEmergencia";
+            btnEmergencia.Size = new Size(175, 45);
+            btnEmergencia.TabIndex = 5;
+            btnEmergencia.Text = "EMERGENCIA";
+            btnEmergencia.UseVisualStyleBackColor = false;
             // 
             // FrmMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(208, 167, 173);
-            ClientSize = new Size(1251, 735);
+            BackColor = Color.FromArgb(144, 93, 101);
+            ClientSize = new Size(1095, 551);
             Controls.Add(pHistorial);
             Controls.Add(pEncabezado);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FrmMain";
-            Padding = new Padding(20);
+            Padding = new Padding(18, 15, 18, 15);
             Text = "FrmMain";
             gbHistorial.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHistorial).EndInit();
@@ -215,13 +269,14 @@
         private TextBox txtCodigo;
         private GroupBox gbHistorial;
         private DataGridView dgvHistorial;
+        private Label lblCodigo;
+        private Panel pHistorial;
+        private Panel pEncabezado;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
-        private Label lblCodigo;
-        private Panel pHistorial;
-        private Panel pEncabezado;
+        private Button btnEmergencia;
     }
 }

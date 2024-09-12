@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentacion.Formularios
 {
-    public partial class FrmABMpersonal : Form
+    public partial class FrmAreas : Form
     {
-        public FrmABMpersonal()
+        public FrmAreas()
         {
             InitializeComponent();
         }

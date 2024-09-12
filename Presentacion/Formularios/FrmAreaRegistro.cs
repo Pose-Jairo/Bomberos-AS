@@ -17,5 +17,10 @@ namespace Presentacion.Formularios
             InitializeComponent();
         }
 
+        private void SeleccionButtons(object sender, EventArgs e)
+        {
+            var button = ((Button)sender);
+            PrincipalFrm.Instancia.AbrirFormulario(button.Name);
+        }
     }
 }
