@@ -28,228 +28,241 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pFormularios = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblActividad = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.tareas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pFormularios.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // pFormularios
-            // 
-            this.pFormularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(167)))), ((int)(((byte)(173)))));
-            this.pFormularios.Controls.Add(this.panel5);
-            this.pFormularios.Controls.Add(this.label1);
-            this.pFormularios.Controls.Add(this.label4);
-            this.pFormularios.Controls.Add(this.panel1);
-            this.pFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pFormularios.Location = new System.Drawing.Point(0, 0);
-            this.pFormularios.Name = "pFormularios";
-            this.pFormularios.Size = new System.Drawing.Size(885, 542);
-            this.pFormularios.TabIndex = 3;
-            this.pFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.pFormularios_Paint);
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            panel5 = new Panel();
+            gbConsultas = new GroupBox();
+            dgvHistorial = new DataGridView();
+            Codigo = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Tarea = new DataGridViewTextBoxColumn();
+            Fecha = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            dateTimePicker1 = new DateTimePicker();
+            btnCargar = new Button();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            panel5.SuspendLayout();
+            gbConsultas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvHistorial).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Location = new System.Drawing.Point(79, 274);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(689, 184);
-            this.panel5.TabIndex = 9;
+            panel5.Controls.Add(gbConsultas);
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(18, 228);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(849, 299);
+            panel5.TabIndex = 9;
             // 
-            // label5
+            // gbConsultas
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(9, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 19);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Bienvenido {Nombre}";
+            gbConsultas.Controls.Add(dgvHistorial);
+            gbConsultas.Dock = DockStyle.Fill;
+            gbConsultas.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            gbConsultas.ForeColor = Color.White;
+            gbConsultas.Location = new Point(0, 0);
+            gbConsultas.Name = "gbConsultas";
+            gbConsultas.Padding = new Padding(9, 8, 9, 8);
+            gbConsultas.Size = new Size(849, 299);
+            gbConsultas.TabIndex = 8;
+            gbConsultas.TabStop = false;
+            gbConsultas.Text = "Lista de Tareas";
             // 
-            // dataGridView1
+            // dgvHistorial
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tareas,
-            this.Estado,
-            this.Fecha});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(574, 115);
-            this.dataGridView1.TabIndex = 7;
+            dgvHistorial.AllowUserToAddRows = false;
+            dgvHistorial.AllowUserToDeleteRows = false;
+            dgvHistorial.AllowUserToResizeColumns = false;
+            dgvHistorial.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(176, 140, 145);
+            dgvHistorial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dgvHistorial.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHistorial.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvHistorial.BackgroundColor = Color.FromArgb(176, 140, 145);
+            dgvHistorial.BorderStyle = BorderStyle.None;
+            dgvHistorial.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(176, 140, 145);
+            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dgvHistorial.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHistorial.Columns.AddRange(new DataGridViewColumn[] { Codigo, Column2, Column3, Tarea, Fecha, Column4, Column5 });
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(176, 140, 145);
+            dataGridViewCellStyle7.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
+            dgvHistorial.DefaultCellStyle = dataGridViewCellStyle7;
+            dgvHistorial.Dock = DockStyle.Fill;
+            dgvHistorial.Location = new Point(9, 27);
+            dgvHistorial.MultiSelect = false;
+            dgvHistorial.Name = "dgvHistorial";
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(176, 140, 145);
+            dataGridViewCellStyle8.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dgvHistorial.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dgvHistorial.RowHeadersVisible = false;
+            dgvHistorial.RowHeadersWidth = 51;
+            dgvHistorial.RowTemplate.Height = 25;
+            dgvHistorial.Size = new Size(831, 264);
+            dgvHistorial.TabIndex = 0;
             // 
-            // label1
+            // Codigo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(309, 241);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 19);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Historico de actividades del bombero";
+            Codigo.HeaderText = "Codigo:";
+            Codigo.MaxInputLength = 3;
+            Codigo.MinimumWidth = 6;
+            Codigo.Name = "Codigo";
             // 
-            // label4
+            // Column2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(345, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(204, 19);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Cargar Tareas Realizadas";
+            Column2.HeaderText = "Nombre:";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
             // 
-            // panel1
+            // Column3
             // 
-            this.panel1.Controls.Add(this.btnCargar);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lblActividad);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(79, 45);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(689, 179);
-            this.panel1.TabIndex = 0;
+            Column3.HeaderText = "Apellido:";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
             // 
-            // btnCargar
+            // Tarea
             // 
-            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnCargar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCargar.Location = new System.Drawing.Point(504, 149);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(73, 23);
-            this.btnCargar.TabIndex = 6;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(249, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Fecha y Hora:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(14, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "ID:";
-            // 
-            // lblActividad
-            // 
-            this.lblActividad.AutoSize = true;
-            this.lblActividad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblActividad.Location = new System.Drawing.Point(14, 120);
-            this.lblActividad.Name = "lblActividad";
-            this.lblActividad.Size = new System.Drawing.Size(181, 19);
-            this.lblActividad.TabIndex = 3;
-            this.lblActividad.Text = "Detalle de la Actividad:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(14, 149);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(484, 23);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(249, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 23);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(14, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 23);
-            this.textBox1.TabIndex = 0;
-            // 
-            // tareas
-            // 
-            this.tareas.HeaderText = "Tarea";
-            this.tareas.Name = "tareas";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
+            Tarea.HeaderText = "Tarea:";
+            Tarea.Name = "Tarea";
             // 
             // Fecha
             // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
+            Fecha.HeaderText = "Fecha:";
+            Fecha.Name = "Fecha";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Hora Entrada:";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Hora Salida:";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(dateTimePicker1);
+            panel1.Controls.Add(btnCargar);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(textBox1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(18, 15);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(849, 213);
+            panel1.TabIndex = 0;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Anchor = AnchorStyles.None;
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(325, 184);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 7;
+            // 
+            // btnCargar
+            // 
+            btnCargar.Anchor = AnchorStyles.Left;
+            btnCargar.BackColor = Color.Green;
+            btnCargar.Cursor = Cursors.Hand;
+            btnCargar.FlatStyle = FlatStyle.Popup;
+            btnCargar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCargar.ForeColor = Color.White;
+            btnCargar.Location = new Point(12, 130);
+            btnCargar.Name = "btnCargar";
+            btnCargar.Size = new Size(148, 45);
+            btnCargar.TabIndex = 6;
+            btnCargar.Text = "Consultar Tareas";
+            btnCargar.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Left;
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(12, 68);
+            label2.Name = "label2";
+            label2.Size = new Size(103, 16);
+            label2.TabIndex = 4;
+            label2.Text = "Identificacion:";
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Left;
+            textBox1.BackColor = Color.FromArgb(176, 140, 145);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.ForeColor = Color.White;
+            textBox1.Location = new Point(12, 87);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(148, 23);
+            textBox1.TabIndex = 0;
+            textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // Consultas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 542);
-            this.Controls.Add(this.pFormularios);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Consultas";
-            this.Text = "Consultas";
-            this.pFormularios.ResumeLayout(false);
-            this.pFormularios.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(144, 93, 101);
+            ClientSize = new Size(885, 542);
+            Controls.Add(panel5);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Consultas";
+            Padding = new Padding(18, 15, 18, 15);
+            Text = "Consultas";
+            panel5.ResumeLayout(false);
+            gbConsultas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvHistorial).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel pFormularios;
-        private PageSetupDialog pageSetupDialog1;
         private Panel panel5;
-        private Label label5;
-        private DataGridView dataGridView1;
-        private Label label1;
-        private Label label4;
         private Panel panel1;
         private Button btnCargar;
-        private Label label3;
         private Label label2;
-        private Label lblActividad;
-        private TextBox textBox3;
-        private TextBox textBox2;
         private TextBox textBox1;
-        private DataGridViewTextBoxColumn tareas;
-        private DataGridViewTextBoxColumn Estado;
+        private DateTimePicker dateTimePicker1;
+        private GroupBox gbConsultas;
+        private DataGridView dgvHistorial;
+        private DataGridViewTextBoxColumn Codigo;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Tarea;
         private DataGridViewTextBoxColumn Fecha;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
     }
 }

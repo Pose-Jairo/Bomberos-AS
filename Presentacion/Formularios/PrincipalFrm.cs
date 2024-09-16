@@ -12,9 +12,12 @@ namespace Presentacion.Formularios
 {
     public partial class PrincipalFrm : Form
     {
+        public static PrincipalFrm Instancia { get; private set; }
+
         public PrincipalFrm()
         {
             InitializeComponent();
+            Instancia = this;
         }
 
         private Image imgMaximizar;
@@ -29,6 +32,7 @@ namespace Presentacion.Formularios
             OpenFormHijo(new FrmMain());
             btnInicio.BackColor = Color.FromArgb(140, 11, 32);
             BotonAnterior = btnInicio;
+            pMaxMin.BackgroundImage = imgMinimizar;
         }
 
         private void tFecha_Tick(object sender, EventArgs e)
@@ -62,6 +66,37 @@ namespace Presentacion.Formularios
                 case "btnConsultas":
                     OpenFormHijo(new Consultas());
                     break;
+                case "btnArea":
+                    OpenFormHijo(new FrmAreas());
+                    break;
+                case "btnAdmin":
+                    OpenFormHijo(new FrmAdministracion());
+                    break;
+                case "btnAreas":
+                    OpenFormHijo(new FrmAreas());
+                    break;
+                case "btnBomberos":
+                    OpenFormHijo(new FrmABMpersonal());
+                    break;
+                case "btnAsisArea":
+                    OpenFormHijo(new FrmCalificaciones());
+                    break;
+                case "btnAsisInsti":
+                    OpenFormHijo(new FrmCalificaciones());
+                    break;
+                case "btnVolverArea":
+                    OpenFormHijo(new FrmAreas());
+                    break;
+                case "btnVolverBomberos":
+                    OpenFormHijo(new FrmAdministracion());
+                    break;
+                case "btnCancelarCalificaciones":
+                    OpenFormHijo(new FrmAdministracion());
+                    break;
+                default:
+                    OpenFormHijo(new FrmAreaRegistro());
+                    break;
+
             }
         }
 
@@ -91,19 +126,19 @@ namespace Presentacion.Formularios
                     break;
                 case "pMaxMin":
                     if (pMaxMin.BackgroundImage == imgMinimizar)
-                   { 
-                    this.Size = new Size(800, 600);
+                    {
+                        this.Size = new Size(800, 600);
 
-                    int pantallaAncho = Screen.PrimaryScreen.Bounds.Width;
-                    int pantallaAlto = Screen.PrimaryScreen.Bounds.Height;
+                        int pantallaAncho = Screen.PrimaryScreen.Bounds.Width;
+                        int pantallaAlto = Screen.PrimaryScreen.Bounds.Height;
 
-                    int formX = (pantallaAncho - this.Width) / 2;
-                    int formY = (pantallaAlto - this.Height) / 2;
+                        int formX = (pantallaAncho - this.Width) / 2;
+                        int formY = (pantallaAlto - this.Height) / 2;
 
-                    this.Location = new Point(formX, formY);
+                        this.Location = new Point(formX, formY);
 
                         pMaxMin.BackgroundImage = imgMaximizar;
-                   }
+                    }
                     else
                     {
                         this.Bounds = Screen.PrimaryScreen.WorkingArea;

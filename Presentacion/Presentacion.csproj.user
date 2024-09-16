@@ -7,16 +7,22 @@
     <Compile Update="Formularios\FrmABMpersonal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\FrmAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\FrmAreaRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FrmAreas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FrmCalificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FrmMain.cs">
+    <Compile Update="Formularios\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\MenuFrm.cs">
+    <Compile Update="Formularios\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\PrincipalFrm.cs">

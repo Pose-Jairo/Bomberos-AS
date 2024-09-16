@@ -38,17 +38,17 @@
             pMaxMin = new Panel();
             pCerrar = new Panel();
             pContenedor = new Panel();
-            button1 = new Button();
+            btnAdmin = new Button();
             pFecha = new Panel();
             lblHora = new Label();
             lblFecha = new Label();
-            btnAdmin = new Button();
+            btnArea = new Button();
             btnConsultas = new Button();
             btnInicio = new Button();
             pLogo = new Panel();
+            pbLogo = new PictureBox();
             panelContenedor = new Panel();
             tFecha = new System.Windows.Forms.Timer(components);
-            pbLogo = new PictureBox();
             pBarraSuperior.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo2).BeginInit();
@@ -60,7 +60,7 @@
             // 
             // pBarraSuperior
             // 
-            pBarraSuperior.BackColor = Color.FromArgb(138, 34, 50);
+            pBarraSuperior.BackColor = Color.FromArgb(68, 17, 25);
             pBarraSuperior.Controls.Add(lblTitulo);
             pBarraSuperior.Controls.Add(panelLogo);
             pBarraSuperior.Controls.Add(pMin);
@@ -141,10 +141,10 @@
             // 
             // pContenedor
             // 
-            pContenedor.BackColor = Color.FromArgb(138, 34, 50);
-            pContenedor.Controls.Add(button1);
-            pContenedor.Controls.Add(pFecha);
+            pContenedor.BackColor = Color.FromArgb(68, 17, 25);
             pContenedor.Controls.Add(btnAdmin);
+            pContenedor.Controls.Add(pFecha);
+            pContenedor.Controls.Add(btnArea);
             pContenedor.Controls.Add(btnConsultas);
             pContenedor.Controls.Add(btnInicio);
             pContenedor.Controls.Add(pLogo);
@@ -154,23 +154,25 @@
             pContenedor.Size = new Size(180, 518);
             pContenedor.TabIndex = 1;
             // 
-            // button1
+            // btnAdmin
             // 
-            button1.BackColor = Color.FromArgb(97, 24, 35);
-            button1.Cursor = Cursors.Hand;
-            button1.Dock = DockStyle.Top;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.ImageAlign = ContentAlignment.MiddleRight;
-            button1.Location = new Point(0, 375);
-            button1.Name = "button1";
-            button1.RightToLeft = RightToLeft.No;
-            button1.Size = new Size(180, 75);
-            button1.TabIndex = 5;
-            button1.Text = "Administracion";
-            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = false;
+            btnAdmin.BackColor = Color.FromArgb(97, 24, 35);
+            btnAdmin.Cursor = Cursors.Hand;
+            btnAdmin.Dock = DockStyle.Top;
+            btnAdmin.FlatStyle = FlatStyle.Popup;
+            btnAdmin.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAdmin.ForeColor = Color.White;
+            btnAdmin.Image = Properties.Resources.icon_bombero;
+            btnAdmin.ImageAlign = ContentAlignment.MiddleRight;
+            btnAdmin.Location = new Point(0, 375);
+            btnAdmin.Name = "btnAdmin";
+            btnAdmin.RightToLeft = RightToLeft.No;
+            btnAdmin.Size = new Size(180, 75);
+            btnAdmin.TabIndex = 5;
+            btnAdmin.Text = " Administracion";
+            btnAdmin.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAdmin.UseVisualStyleBackColor = false;
+            btnAdmin.Click += SeleccionButtons;
             // 
             // pFecha
             // 
@@ -184,6 +186,7 @@
             // 
             // lblHora
             // 
+            lblHora.BackColor = Color.FromArgb(68, 17, 25);
             lblHora.Dock = DockStyle.Bottom;
             lblHora.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblHora.ForeColor = Color.White;
@@ -196,6 +199,7 @@
             // 
             // lblFecha
             // 
+            lblFecha.BackColor = Color.FromArgb(68, 17, 25);
             lblFecha.Dock = DockStyle.Top;
             lblFecha.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblFecha.ForeColor = Color.White;
@@ -206,23 +210,24 @@
             lblFecha.Text = "FECHA";
             lblFecha.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnAdmin
+            // btnArea
             // 
-            btnAdmin.BackColor = Color.FromArgb(97, 24, 35);
-            btnAdmin.Cursor = Cursors.Hand;
-            btnAdmin.Dock = DockStyle.Top;
-            btnAdmin.FlatStyle = FlatStyle.Popup;
-            btnAdmin.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdmin.ForeColor = Color.White;
-            btnAdmin.Image = Properties.Resources.icon_bombero;
-            btnAdmin.ImageAlign = ContentAlignment.MiddleRight;
-            btnAdmin.Location = new Point(0, 300);
-            btnAdmin.Name = "btnAdmin";
-            btnAdmin.Size = new Size(180, 75);
-            btnAdmin.TabIndex = 3;
-            btnAdmin.Text = " Areas";
-            btnAdmin.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAdmin.UseVisualStyleBackColor = false;
+            btnArea.BackColor = Color.FromArgb(97, 24, 35);
+            btnArea.Cursor = Cursors.Hand;
+            btnArea.Dock = DockStyle.Top;
+            btnArea.FlatStyle = FlatStyle.Popup;
+            btnArea.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnArea.ForeColor = Color.White;
+            btnArea.Image = (Image)resources.GetObject("btnArea.Image");
+            btnArea.ImageAlign = ContentAlignment.MiddleRight;
+            btnArea.Location = new Point(0, 300);
+            btnArea.Name = "btnArea";
+            btnArea.Size = new Size(180, 75);
+            btnArea.TabIndex = 3;
+            btnArea.Text = " Areas";
+            btnArea.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnArea.UseVisualStyleBackColor = false;
+            btnArea.Click += SeleccionButtons;
             // 
             // btnConsultas
             // 
@@ -265,6 +270,7 @@
             // 
             // pLogo
             // 
+            pLogo.BackColor = Color.FromArgb(68, 17, 25);
             pLogo.BackgroundImageLayout = ImageLayout.None;
             pLogo.Controls.Add(pbLogo);
             pLogo.Dock = DockStyle.Top;
@@ -273,20 +279,6 @@
             pLogo.Padding = new Padding(10);
             pLogo.Size = new Size(180, 150);
             pLogo.TabIndex = 0;
-            // 
-            // panelContenedor
-            // 
-            panelContenedor.BackColor = Color.FromArgb(208, 167, 173);
-            panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(180, 22);
-            panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(940, 518);
-            panelContenedor.TabIndex = 2;
-            // 
-            // tFecha
-            // 
-            tFecha.Enabled = true;
-            tFecha.Tick += tFecha_Tick;
             // 
             // pbLogo
             // 
@@ -298,6 +290,20 @@
             pbLogo.Size = new Size(160, 130);
             pbLogo.TabIndex = 0;
             pbLogo.TabStop = false;
+            // 
+            // panelContenedor
+            // 
+            panelContenedor.BackColor = Color.FromArgb(144, 93, 101);
+            panelContenedor.Dock = DockStyle.Fill;
+            panelContenedor.Location = new Point(180, 22);
+            panelContenedor.Name = "panelContenedor";
+            panelContenedor.Size = new Size(940, 518);
+            panelContenedor.TabIndex = 2;
+            // 
+            // tFecha
+            // 
+            tFecha.Enabled = true;
+            tFecha.Tick += tFecha_Tick;
             // 
             // PrincipalFrm
             // 
@@ -332,7 +338,7 @@
         private Panel pLogo;
         private Button btnInicio;
         private Panel pFecha;
-        private Button btnAdmin;
+        private Button btnArea;
         private Button btnConsultas;
         private Label lblFecha;
         private Panel pMin;
@@ -341,7 +347,7 @@
         private Label lblHora;
         private System.Windows.Forms.Timer tFecha;
         private Panel panelLogo;
-        private Button button1;
+        private Button btnAdmin;
         private Label lblTitulo;
         private PictureBox pbLogo2;
         private PictureBox pbLogo;
