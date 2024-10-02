@@ -133,7 +133,7 @@
             // 
             // btnAsisArea
             // 
-            btnAsisArea.Anchor = AnchorStyles.Left;
+            btnAsisArea.Anchor = AnchorStyles.None;
             btnAsisArea.AutoSize = true;
             btnAsisArea.BackColor = Color.FromArgb(97, 24, 35);
             btnAsisArea.FlatStyle = FlatStyle.Popup;
@@ -149,7 +149,7 @@
             // 
             // btnAsisInsti
             // 
-            btnAsisInsti.Anchor = AnchorStyles.Right;
+            btnAsisInsti.Anchor = AnchorStyles.None;
             btnAsisInsti.AutoSize = true;
             btnAsisInsti.BackColor = Color.FromArgb(97, 24, 35);
             btnAsisInsti.FlatStyle = FlatStyle.Popup;
