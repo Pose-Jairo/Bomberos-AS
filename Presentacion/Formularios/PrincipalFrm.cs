@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion.Formularios
@@ -67,13 +66,13 @@ namespace Presentacion.Formularios
                     OpenFormHijo(new Consultas());
                     break;
                 case "btnArea":
-                    OpenFormHijo(new FrmAreas());
+                    OpenFormHijo(new FrmAreaRegistro());
                     break;
                 case "btnAdmin":
                     OpenFormHijo(new FrmAdministracion());
                     break;
                 case "btnAreas":
-                    OpenFormHijo(new FrmAreas());
+                    OpenFormHijo(new FrmAreaRegistro());
                     break;
                 case "btnBomberos":
                     OpenFormHijo(new FrmABMpersonal());
@@ -92,9 +91,6 @@ namespace Presentacion.Formularios
                     break;
                 case "btnCancelarCalificaciones":
                     OpenFormHijo(new FrmAdministracion());
-                    break;
-                default:
-                    OpenFormHijo(new FrmAreaRegistro());
                     break;
 
             }

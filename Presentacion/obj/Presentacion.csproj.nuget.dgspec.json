@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Presentacion\\Presentacion.csproj": {}
+    "D:\\Bomberos A-S\\Presentacion\\Presentacion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj": {
+    "D:\\Bomberos A-S\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj",
+        "projectUniqueName": "D:\\Bomberos A-S\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj",
-        "packagesPath": "C:\\Users\\LUCAS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\obj\\",
+        "projectPath": "D:\\Bomberos A-S\\Datos\\Datos.csproj",
+        "packagesPath": "C:\\Users\\Usuario 12\\.nuget\\packages\\",
+        "outputPath": "D:\\Bomberos A-S\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LUCAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario 12\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,22 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,21 +66,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Logica\\Logica.csproj": {
+    "D:\\Bomberos A-S\\Logica\\Logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Logica\\Logica.csproj",
+        "projectUniqueName": "D:\\Bomberos A-S\\Logica\\Logica.csproj",
         "projectName": "Logica",
-        "projectPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Logica\\Logica.csproj",
-        "packagesPath": "C:\\Users\\LUCAS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Logica\\obj\\",
+        "projectPath": "D:\\Bomberos A-S\\Logica\\Logica.csproj",
+        "packagesPath": "C:\\Users\\Usuario 12\\.nuget\\packages\\",
+        "outputPath": "D:\\Bomberos A-S\\Logica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LUCAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario 12\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +94,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj": {
-                "projectPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj"
+              "D:\\Bomberos A-S\\Datos\\Datos.csproj": {
+                "projectPath": "D:\\Bomberos A-S\\Datos\\Datos.csproj"
               }
             }
           }
@@ -93,6 +104,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -114,21 +130,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Presentacion\\Presentacion.csproj": {
+    "D:\\Bomberos A-S\\Presentacion\\Presentacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Presentacion\\Presentacion.csproj",
+        "projectUniqueName": "D:\\Bomberos A-S\\Presentacion\\Presentacion.csproj",
         "projectName": "Presentacion",
-        "projectPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Presentacion\\Presentacion.csproj",
-        "packagesPath": "C:\\Users\\LUCAS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Presentacion\\obj\\",
+        "projectPath": "D:\\Bomberos A-S\\Presentacion\\Presentacion.csproj",
+        "packagesPath": "C:\\Users\\Usuario 12\\.nuget\\packages\\",
+        "outputPath": "D:\\Bomberos A-S\\Presentacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LUCAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario 12\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -142,8 +158,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Logica\\Logica.csproj": {
-                "projectPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Logica\\Logica.csproj"
+              "D:\\Bomberos A-S\\Logica\\Logica.csproj": {
+                "projectPath": "D:\\Bomberos A-S\\Logica\\Logica.csproj"
               }
             }
           }
@@ -152,6 +168,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -176,7 +197,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
