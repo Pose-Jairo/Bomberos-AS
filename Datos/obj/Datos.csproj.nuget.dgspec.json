@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj": {}
+    "D:\\Bomberos A-S\\Datos\\Datos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj": {
+    "D:\\Bomberos A-S\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj",
+        "projectUniqueName": "D:\\Bomberos A-S\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\Datos.csproj",
-        "packagesPath": "C:\\Users\\LUCAS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LUCAS\\Desktop\\BOMBER\\Bomberos-AS\\Datos\\obj\\",
+        "projectPath": "D:\\Bomberos A-S\\Datos\\Datos.csproj",
+        "packagesPath": "C:\\Users\\Usuario 12\\.nuget\\packages\\",
+        "outputPath": "D:\\Bomberos A-S\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LUCAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario 12\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,22 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
