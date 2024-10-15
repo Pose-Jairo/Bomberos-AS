@@ -35,18 +35,11 @@
             panel5 = new Panel();
             gbConsultas = new GroupBox();
             dgvHistorial = new DataGridView();
-            Codigo = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Tarea = new DataGridViewTextBoxColumn();
-            Fecha = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
-            dateTimePicker1 = new DateTimePicker();
+            dtpFecha = new DateTimePicker();
             btnCargar = new Button();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtConsulta = new TextBox();
             panel5.SuspendLayout();
             gbConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvHistorial).BeginInit();
@@ -98,7 +91,6 @@
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
             dgvHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvHistorial.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHistorial.Columns.AddRange(new DataGridViewColumn[] { Codigo, Column2, Column3, Tarea, Fecha, Column4, Column5 });
             dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = Color.FromArgb(176, 140, 145);
             dataGridViewCellStyle7.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -111,6 +103,7 @@
             dgvHistorial.Location = new Point(9, 27);
             dgvHistorial.MultiSelect = false;
             dgvHistorial.Name = "dgvHistorial";
+            dgvHistorial.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = Color.FromArgb(176, 140, 145);
             dataGridViewCellStyle8.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -125,67 +118,30 @@
             dgvHistorial.Size = new Size(831, 264);
             dgvHistorial.TabIndex = 0;
             // 
-            // Codigo
-            // 
-            Codigo.HeaderText = "Codigo:";
-            Codigo.MaxInputLength = 3;
-            Codigo.MinimumWidth = 6;
-            Codigo.Name = "Codigo";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre:";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Apellido:";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            // 
-            // Tarea
-            // 
-            Tarea.HeaderText = "Tarea:";
-            Tarea.Name = "Tarea";
-            // 
-            // Fecha
-            // 
-            Fecha.HeaderText = "Fecha:";
-            Fecha.Name = "Fecha";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Hora Entrada:";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Hora Salida:";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            // 
             // panel1
             // 
-            panel1.Controls.Add(dateTimePicker1);
+            panel1.Controls.Add(dtpFecha);
             panel1.Controls.Add(btnCargar);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtConsulta);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(18, 15);
             panel1.Name = "panel1";
             panel1.Size = new Size(849, 213);
             panel1.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            dateTimePicker1.Anchor = AnchorStyles.None;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(325, 184);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 7;
+            dtpFecha.Anchor = AnchorStyles.None;
+            dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.Location = new Point(324, 184);
+            dtpFecha.MaxDate = new DateTime(2024, 10, 15, 0, 0, 0, 0);
+            dtpFecha.MinDate = new DateTime(1920, 1, 1, 0, 0, 0, 0);
+            dtpFecha.Name = "dtpFecha";
+            dtpFecha.Size = new Size(200, 23);
+            dtpFecha.TabIndex = 7;
+            dtpFecha.Value = new DateTime(2024, 10, 15, 0, 0, 0, 0);
+            dtpFecha.ValueChanged += CambioDeFecha;
             // 
             // btnCargar
             // 
@@ -201,6 +157,7 @@
             btnCargar.TabIndex = 6;
             btnCargar.Text = "Consultar Tareas";
             btnCargar.UseVisualStyleBackColor = false;
+            btnCargar.Click += btnCargar_Click;
             // 
             // label2
             // 
@@ -214,19 +171,21 @@
             label2.TabIndex = 4;
             label2.Text = "Identificacion:";
             // 
-            // textBox1
+            // txtConsulta
             // 
-            textBox1.Anchor = AnchorStyles.Left;
-            textBox1.BackColor = Color.FromArgb(176, 140, 145);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(12, 87);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(148, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            txtConsulta.Anchor = AnchorStyles.Left;
+            txtConsulta.BackColor = Color.FromArgb(176, 140, 145);
+            txtConsulta.BorderStyle = BorderStyle.None;
+            txtConsulta.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtConsulta.ForeColor = Color.White;
+            txtConsulta.Location = new Point(12, 87);
+            txtConsulta.MaxLength = 3;
+            txtConsulta.Multiline = true;
+            txtConsulta.Name = "txtConsulta";
+            txtConsulta.Size = new Size(148, 23);
+            txtConsulta.TabIndex = 0;
+            txtConsulta.TextAlign = HorizontalAlignment.Center;
+            txtConsulta.TextChanged += txtConsulta_TextChanged;
             // 
             // Consultas
             // 
@@ -240,6 +199,7 @@
             Name = "Consultas";
             Padding = new Padding(18, 15, 18, 15);
             Text = "Consultas";
+            Load += Consultas_Load;
             panel5.ResumeLayout(false);
             gbConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHistorial).EndInit();
@@ -253,16 +213,9 @@
         private Panel panel1;
         private Button btnCargar;
         private Label label2;
-        private TextBox textBox1;
-        private DateTimePicker dateTimePicker1;
+        private TextBox txtConsulta;
+        private DateTimePicker dtpFecha;
         private GroupBox gbConsultas;
         private DataGridView dgvHistorial;
-        private DataGridViewTextBoxColumn Codigo;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Tarea;
-        private DataGridViewTextBoxColumn Fecha;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
     }
 }

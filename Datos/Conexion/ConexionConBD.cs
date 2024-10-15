@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using Microsoft.Data.SqlClient;
 
@@ -6,7 +6,7 @@ namespace Datos.Conexion
 {
     public class ConexionConBD
     {
-        static private string strConexion = @"Data Source=.\SQLEXPRESS;Initial Catalog=Bomberito_DB;Integrated Security=True";
+        static private string strConexion = "Server=localhost; Initial Catalog = Bomberos; Integrated Security = true;TrustServerCertificate=True;";  
 
         public SqlConnection Conexion {  get; set; }
         public SqlCommand Orden {  get; set; }

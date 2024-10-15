@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Data;
 using Datos.Conexion;
 
 namespace Logica.Negocio
 {
-    internal class Metodos
+    public class Metodos
     {
         ConexionConBD BDConexion = new ConexionConBD();
 
