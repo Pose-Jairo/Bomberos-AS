@@ -49,9 +49,11 @@ namespace Presentacion.Formularios
             if (textbox.Text == "")
             {
                 string consulta = "SELECT tarea.cod_bombero AS Codigo, bombero.nombre AS Nombre, bombero.apellido AS Apellido, tarea.detalle AS Tarea, " +
-                                          "tarea.estado AS Estado FROM tarea INNER JOIN bombero ON bombero.cod_bombero=tarea.cod_bombero;";
+                                  "tarea.estado AS Estado FROM tarea INNER JOIN bombero ON bombero.cod_bombero=tarea.cod_bombero WHERE tarea.fecha='" + DateTime.Now.ToShortDateString() + "';";
 
                 CargaDeGrilla(consulta);
+
+                dtpFecha.Text = DateTime.Now.ToShortDateString();
             }
         }
 

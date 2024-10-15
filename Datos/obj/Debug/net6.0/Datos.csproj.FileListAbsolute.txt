@@ -47,3 +47,16 @@ D:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.dll
 D:\Bomberos A-S\Datos\obj\Debug\net6.0\refint\Datos.dll
 D:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.pdb
 D:\Bomberos A-S\Datos\obj\Debug\net6.0\ref\Datos.dll
+E:\Bomberos A-S\Datos\bin\Debug\net6.0\Datos.deps.json
+E:\Bomberos A-S\Datos\bin\Debug\net6.0\Datos.dll
+E:\Bomberos A-S\Datos\bin\Debug\net6.0\Datos.pdb
+E:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.csproj.AssemblyReference.cache
+E:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.GeneratedMSBuildEditorConfig.editorconfig
+E:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.AssemblyInfoInputs.cache
+E:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.AssemblyInfo.cs
+E:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.csproj.CoreCompileInputs.cache
+E:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.sourcelink.json
+E:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.dll
+E:\Bomberos A-S\Datos\obj\Debug\net6.0\refint\Datos.dll
+E:\Bomberos A-S\Datos\obj\Debug\net6.0\Datos.pdb
+E:\Bomberos A-S\Datos\obj\Debug\net6.0\ref\Datos.dll

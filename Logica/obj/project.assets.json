@@ -1902,19 +1902,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario 12\\.nuget\\packages\\": {}
+    "C:\\Users\\RYZEN 3 3200g\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Bomberos A-S\\Logica\\Logica.csproj",
+      "projectUniqueName": "E:\\Bomberos A-S\\Logica\\Logica.csproj",
       "projectName": "Logica",
-      "projectPath": "D:\\Bomberos A-S\\Logica\\Logica.csproj",
-      "packagesPath": "C:\\Users\\Usuario 12\\.nuget\\packages\\",
-      "outputPath": "D:\\Bomberos A-S\\Logica\\obj\\",
+      "projectPath": "E:\\Bomberos A-S\\Logica\\Logica.csproj",
+      "packagesPath": "C:\\Users\\RYZEN 3 3200g\\.nuget\\packages\\",
+      "outputPath": "E:\\Bomberos A-S\\Logica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario 12\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RYZEN 3 3200g\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1922,14 +1922,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Bomberos A-S\\Datos\\Datos.csproj": {
-              "projectPath": "D:\\Bomberos A-S\\Datos\\Datos.csproj"
+            "E:\\Bomberos A-S\\Datos\\Datos.csproj": {
+              "projectPath": "E:\\Bomberos A-S\\Datos\\Datos.csproj"
             }
           }
         }

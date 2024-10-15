@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Usuario 12\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Usuario 12\\.nuget\\packages"
+      "C:\\Users\\RYZEN 3 3200g\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\RYZEN 3 3200g\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
