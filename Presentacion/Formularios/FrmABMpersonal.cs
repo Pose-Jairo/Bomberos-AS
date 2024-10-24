@@ -65,8 +65,41 @@ namespace Presentacion.Formularios
             int rango = cmbRango.SelectedIndex + 1;
             //consulta de insert...
             alta = ClaseConexion.EjecutarConsulta("Insert into bombero(nombre, apellido, cod_rango, cod_area) VALUES('" + txtNombre.Text + "','" + txtApellido.Text + "'," + rango + "," + area + ")");
+            //comprueba el resultado e informa por mensaje
+            if (alta == true)
+            {
+                MessageBox.Show("Se registro con exito!");
+                //se llama al vento load del formulario para recargar la grilla...
+                FrmABMpersonal_Load(null, null);
+            }
+            else
+            {
+                MessageBox.Show("ERROR al ejecutar la consulta...!");
+            }
         }
 
+        private void btnMod_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void Click_Celda(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1 && (rbElimReg.Checked || rbModReg.Checked))
+            {
+                txtNombre.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+                txtApellido.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["apellido"].Value.ToString();
+                var cellRango = dgvTablaPersonal.Rows[e.RowIndex].Cells["rango"].Value.ToString;
+                foreach (var item in cmbRango.Items)
+                {
+                    if (item.ToString == cellRango)
+                    {
+                        cmbRango.SelectedItem = item;
+                        break;
+                    }
+                }
+                var cellArea = dgvTablaPersonal.Rows[e.RowIndex].Cells["area"].Value.ToString();
+            }
+        }
     }
 }

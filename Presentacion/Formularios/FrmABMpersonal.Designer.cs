@@ -41,6 +41,9 @@
             label2 = new Label();
             label1 = new Label();
             groupBox3 = new GroupBox();
+            txtContrasena = new TextBox();
+            cbActivo = new CheckBox();
+            cbPermiso = new CheckBox();
             label9 = new Label();
             cmbArea = new ComboBox();
             btnVolverBomberos = new Button();
@@ -58,9 +61,8 @@
             pSuperior = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
-            cbPermiso = new CheckBox();
-            cbActivo = new CheckBox();
-            txtContrasena = new TextBox();
+            btnMod = new Button();
+            btnDel = new Button();
             gbSuperior.SuspendLayout();
             pIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTablaPersonal).BeginInit();
@@ -111,6 +113,7 @@
             dgvTablaPersonal.RowTemplate.Height = 25;
             dgvTablaPersonal.Size = new Size(495, 301);
             dgvTablaPersonal.TabIndex = 0;
+            dgvTablaPersonal.CellClick += Click_Celda;
             // 
             // pDerecha
             // 
@@ -219,6 +222,8 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(btnDel);
+            groupBox3.Controls.Add(btnMod);
             groupBox3.Controls.Add(txtContrasena);
             groupBox3.Controls.Add(cbActivo);
             groupBox3.Controls.Add(cbPermiso);
@@ -241,13 +246,40 @@
             groupBox3.Size = new Size(790, 244);
             groupBox3.TabIndex = 1;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Registrar nuevo Personal:";
+            groupBox3.Text = "Control de personal:";
+            // 
+            // txtContrasena
+            // 
+            txtContrasena.Location = new Point(201, 68);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.Size = new Size(157, 22);
+            txtContrasena.TabIndex = 17;
+            // 
+            // cbActivo
+            // 
+            cbActivo.AutoSize = true;
+            cbActivo.Location = new Point(201, 121);
+            cbActivo.Name = "cbActivo";
+            cbActivo.Size = new Size(163, 20);
+            cbActivo.TabIndex = 16;
+            cbActivo.Text = "El usuario esta inactivo";
+            cbActivo.UseVisualStyleBackColor = true;
+            // 
+            // cbPermiso
+            // 
+            cbPermiso.AutoSize = true;
+            cbPermiso.Location = new Point(201, 26);
+            cbPermiso.Name = "cbPermiso";
+            cbPermiso.Size = new Size(179, 36);
+            cbPermiso.TabIndex = 15;
+            cbPermiso.Text = "El usuario tiene permisos \r\nde administracion";
+            cbPermiso.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
             label9.Anchor = AnchorStyles.Left;
             label9.AutoSize = true;
-            label9.Location = new Point(22, 172);
+            label9.Location = new Point(22, 158);
             label9.Name = "label9";
             label9.Size = new Size(39, 16);
             label9.TabIndex = 14;
@@ -261,7 +293,7 @@
             cmbArea.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbArea.ForeColor = Color.White;
             cmbArea.FormattingEnabled = true;
-            cmbArea.Location = new Point(70, 166);
+            cmbArea.Location = new Point(70, 152);
             cmbArea.Name = "cmbArea";
             cmbArea.Size = new Size(100, 28);
             cmbArea.TabIndex = 13;
@@ -340,11 +372,11 @@
             btnEjecutar.BackColor = Color.Green;
             btnEjecutar.FlatStyle = FlatStyle.Popup;
             btnEjecutar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEjecutar.Location = new Point(201, 189);
+            btnEjecutar.Location = new Point(10, 202);
             btnEjecutar.Name = "btnEjecutar";
-            btnEjecutar.Size = new Size(157, 48);
+            btnEjecutar.Size = new Size(119, 35);
             btnEjecutar.TabIndex = 9;
-            btnEjecutar.Text = "Ejecutar";
+            btnEjecutar.Text = "Agregar";
             btnEjecutar.UseVisualStyleBackColor = false;
             btnEjecutar.Click += btnEjecutar_Click;
             // 
@@ -356,7 +388,7 @@
             cmbRango.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbRango.ForeColor = Color.White;
             cmbRango.FormattingEnabled = true;
-            cmbRango.Location = new Point(70, 116);
+            cmbRango.Location = new Point(70, 105);
             cmbRango.Name = "cmbRango";
             cmbRango.Size = new Size(100, 28);
             cmbRango.TabIndex = 6;
@@ -368,7 +400,7 @@
             txtApellido.BorderStyle = BorderStyle.None;
             txtApellido.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtApellido.ForeColor = Color.White;
-            txtApellido.Location = new Point(70, 71);
+            txtApellido.Location = new Point(70, 65);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(100, 19);
             txtApellido.TabIndex = 5;
@@ -380,7 +412,7 @@
             txtNombre.BorderStyle = BorderStyle.None;
             txtNombre.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtNombre.ForeColor = Color.White;
-            txtNombre.Location = new Point(70, 33);
+            txtNombre.Location = new Point(70, 30);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(100, 19);
             txtNombre.TabIndex = 4;
@@ -389,7 +421,7 @@
             // 
             label6.Anchor = AnchorStyles.Left;
             label6.AutoSize = true;
-            label6.Location = new Point(10, 119);
+            label6.Location = new Point(10, 108);
             label6.Name = "label6";
             label6.Size = new Size(51, 16);
             label6.TabIndex = 2;
@@ -399,7 +431,7 @@
             // 
             label5.Anchor = AnchorStyles.Left;
             label5.AutoSize = true;
-            label5.Location = new Point(10, 74);
+            label5.Location = new Point(10, 68);
             label5.Name = "label5";
             label5.Size = new Size(60, 16);
             label5.TabIndex = 1;
@@ -409,7 +441,7 @@
             // 
             label4.Anchor = AnchorStyles.Left;
             label4.AutoSize = true;
-            label4.Location = new Point(10, 33);
+            label4.Location = new Point(10, 30);
             label4.Name = "label4";
             label4.Size = new Size(59, 16);
             label4.TabIndex = 0;
@@ -444,32 +476,32 @@
             panel3.Size = new Size(800, 254);
             panel3.TabIndex = 4;
             // 
-            // cbPermiso
+            // btnMod
             // 
-            cbPermiso.AutoSize = true;
-            cbPermiso.Location = new Point(201, 26);
-            cbPermiso.Name = "cbPermiso";
-            cbPermiso.Size = new Size(179, 36);
-            cbPermiso.TabIndex = 15;
-            cbPermiso.Text = "El usuario tiene permisos \r\nde administracion";
-            cbPermiso.UseVisualStyleBackColor = true;
+            btnMod.Anchor = AnchorStyles.Left;
+            btnMod.BackColor = Color.Teal;
+            btnMod.FlatStyle = FlatStyle.Popup;
+            btnMod.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMod.Location = new Point(135, 202);
+            btnMod.Name = "btnMod";
+            btnMod.Size = new Size(119, 35);
+            btnMod.TabIndex = 18;
+            btnMod.Text = "Modificar";
+            btnMod.UseVisualStyleBackColor = false;
+            btnMod.Click += btnMod_Click;
             // 
-            // cbActivo
+            // btnDel
             // 
-            cbActivo.AutoSize = true;
-            cbActivo.Location = new Point(201, 121);
-            cbActivo.Name = "cbActivo";
-            cbActivo.Size = new Size(163, 20);
-            cbActivo.TabIndex = 16;
-            cbActivo.Text = "El usuario esta inactivo";
-            cbActivo.UseVisualStyleBackColor = true;
-            // 
-            // txtContrasena
-            // 
-            txtContrasena.Location = new Point(201, 68);
-            txtContrasena.Name = "txtContrasena";
-            txtContrasena.Size = new Size(157, 22);
-            txtContrasena.TabIndex = 17;
+            btnDel.Anchor = AnchorStyles.Left;
+            btnDel.BackColor = Color.Crimson;
+            btnDel.FlatStyle = FlatStyle.Popup;
+            btnDel.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDel.Location = new Point(260, 202);
+            btnDel.Name = "btnDel";
+            btnDel.Size = new Size(119, 35);
+            btnDel.TabIndex = 19;
+            btnDel.Text = "Eliminar";
+            btnDel.UseVisualStyleBackColor = false;
             // 
             // FrmABMpersonal
             // 
@@ -540,5 +572,7 @@
         private CheckBox cbPermiso;
         private TextBox txtContrasena;
         private CheckBox cbActivo;
+        private Button btnDel;
+        private Button btnMod;
     }
 }
