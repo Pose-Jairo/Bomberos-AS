@@ -61,7 +61,10 @@ namespace Presentacion.Formularios
             }
         }
         
-        /*private void txtConsulta_TextChanged(object sender, EventArgs e)
+       
+        
+        
+        private void txtConsulta_TextChanged(object sender, EventArgs e)
         {
             var textbox = ((TextBox)sender);
 
@@ -74,7 +77,7 @@ namespace Presentacion.Formularios
 
                 dtpFecha.Text = DateTime.Now.ToShortDateString();
             }
-        } */
+        } 
 
 
 

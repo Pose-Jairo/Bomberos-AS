@@ -67,26 +67,25 @@ namespace Datos.Conexion
         public int entrada(string Consulta)
         {
             int Resultado = 0;
-
             Conexion = new SqlConnection(strConexion);
-
             Orden = new SqlCommand(Consulta, Conexion);
 
             try
             {
                 Conexion.Open();
-                Orden.ExecuteNonQuery();
-                Resultado = 1;
+                Resultado = Orden.ExecuteNonQuery(); // Esto devolverá el número real de filas afectadas
             }
             catch
             {
                 Resultado = 0;
             }
+            finally
+            {
+                Desconectar();
+            }
 
-            Desconectar();
             return Resultado;
         }
-        
 
         //necesario para reconocer si el bombero tiene un ingreso sin salida
         public int ObtenerConteo(string Consulta)

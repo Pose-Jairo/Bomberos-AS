@@ -39,7 +39,16 @@ namespace Presentacion.Formularios
             string emergencia = $"INSERT INTO emergencia (fecha, inicio, fin, detalle) " +
                                 $"VALUES ('{fecha_inicio}', '{fecha_inicio} {hora_inicio}', '{fecha_fin} {hora_fin}', '{detalle}')";
             MessageBox.Show(emergencia);
-            metodos.EjecutarConsulta(emergencia);
+            try
+            {
+                metodos.EjecutarConsulta(emergencia);
+                MessageBox.Show("Emergencia registrada correctamente.");
+            }
+            catch 
+            {
+                MessageBox.Show("Error al cargar emergencia.");
+
+            }
 
 
 

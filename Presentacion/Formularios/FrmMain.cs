@@ -85,16 +85,20 @@ namespace Presentacion.Formularios
 
             if (filasAfectadas > 0)
             {
+                // Mostrar el número de filas afectadas y un mensaje de éxito
+                //MessageBox.Show($"Salidas actualizadas: {filasAfectadas}");
                 MessageBox.Show("Salida registrada exitosamente.", "Registro de Salida", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
+                // Si no hubo filas afectadas, indica que no había una entrada sin salida
                 MessageBox.Show("No hay ingreso registrado para el día de hoy o la salida ya ha sido registrada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             // Cargar nuevamente las asistencias del día en la grilla
             CargaDeGrilla(AsistenciasDelDia);
         }
+
 
         public void CargaDeGrilla(string consulta)
         {
