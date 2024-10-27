@@ -21,6 +21,14 @@ namespace Logica.Negocio
             return (Tabla);
         }
 
+        public void EjecutarConsulta(string consulta) 
+        {
+            BDConexion.LectorSql(consulta);
+
+            BDConexion.Desconectar();
+
+        }
+
         //metodo que carga los rangos de la DB en un CMB
         public DataTable Carga_Rango()
         {
