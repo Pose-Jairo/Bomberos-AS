@@ -45,6 +45,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+
             // 
             // panel5
             // 
@@ -132,6 +133,7 @@
             // 
             // dtpFecha
             // 
+
             this.dtpFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(324, 184);
@@ -142,6 +144,18 @@
             this.dtpFecha.TabIndex = 7;
             this.dtpFecha.Value = new System.DateTime(2024, 10, 15, 0, 0, 0, 0);
             this.dtpFecha.ValueChanged += new System.EventHandler(this.CambioDeFecha);
+
+            dtpFecha.Anchor = AnchorStyles.None;
+            dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.Location = new Point(324, 184);
+            dtpFecha.MaxDate = new DateTime(2099, 12, 31, 0, 0, 0, 0);
+            dtpFecha.MinDate = new DateTime(1920, 1, 1, 0, 0, 0, 0);
+            dtpFecha.Name = "dtpFecha";
+            dtpFecha.Size = new Size(200, 23);
+            dtpFecha.TabIndex = 7;
+            dtpFecha.Value = new DateTime(2024, 10, 28, 0, 0, 0, 0);
+            dtpFecha.ValueChanged += CambioDeFecha;
+
             // 
             // btnCargar
             // 

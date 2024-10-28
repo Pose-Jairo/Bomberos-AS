@@ -28,157 +28,118 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            groupBox1 = new GroupBox();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Fecha = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            groupBox2 = new GroupBox();
-            label4 = new Label();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            gbHistorial = new GroupBox();
+            dgvHistorialTareas = new DataGridView();
+            gbTareas = new GroupBox();
+            mtxtHora = new MaskedTextBox();
             btnVolverArea = new Button();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            Registrar = new Button();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            groupBox2.SuspendLayout();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            lblHoraInicio = new Label();
+            lblDescripcion = new Label();
+            lblCodigo = new Label();
+            txtDescripcion = new TextBox();
+            txtCodigo = new TextBox();
+            btnRegistrar = new Button();
+            pHistorial = new Panel();
+            pTareas = new Panel();
+            gbHistorial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvHistorialTareas).BeginInit();
+            gbTareas.SuspendLayout();
+            pHistorial.SuspendLayout();
+            pTareas.SuspendLayout();
             SuspendLayout();
             // 
-            // groupBox1
+            // gbHistorial
             // 
-            groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Dock = DockStyle.Fill;
-            groupBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(20, 20);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(10);
-            groupBox1.Size = new Size(730, 191);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Historial de registros:";
+            gbHistorial.Controls.Add(dgvHistorialTareas);
+            gbHistorial.Dock = DockStyle.Fill;
+            gbHistorial.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            gbHistorial.ForeColor = Color.White;
+            gbHistorial.Location = new Point(10, 10);
+            gbHistorial.Name = "gbHistorial";
+            gbHistorial.Padding = new Padding(1);
+            gbHistorial.Size = new Size(750, 241);
+            gbHistorial.TabIndex = 0;
+            gbHistorial.TabStop = false;
+            gbHistorial.Text = "Historial de registros:";
             // 
-            // dataGridView1
+            // dgvHistorialTareas
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.FromArgb(176, 140, 145);
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Fecha, Column2, Column3, Column4, Column5, Column6 });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
-            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(10, 29);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(710, 152);
-            dataGridView1.TabIndex = 0;
+            dgvHistorialTareas.AllowUserToAddRows = false;
+            dgvHistorialTareas.AllowUserToDeleteRows = false;
+            dgvHistorialTareas.AllowUserToResizeRows = false;
+            dgvHistorialTareas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHistorialTareas.BackgroundColor = Color.FromArgb(176, 140, 145);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvHistorialTareas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvHistorialTareas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(176, 140, 145);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvHistorialTareas.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvHistorialTareas.Dock = DockStyle.Fill;
+            dgvHistorialTareas.Location = new Point(1, 20);
+            dgvHistorialTareas.Name = "dgvHistorialTareas";
+            dgvHistorialTareas.ReadOnly = true;
+            dgvHistorialTareas.RowHeadersVisible = false;
+            dgvHistorialTareas.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(176, 140, 145);
+            dgvHistorialTareas.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dgvHistorialTareas.RowTemplate.Height = 25;
+            dgvHistorialTareas.Size = new Size(748, 220);
+            dgvHistorialTareas.TabIndex = 0;
             // 
-            // Column1
+            // gbTareas
             // 
-            Column1.HeaderText = "Codigo:";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            gbTareas.Controls.Add(mtxtHora);
+            gbTareas.Controls.Add(btnVolverArea);
+            gbTareas.Controls.Add(lblHoraInicio);
+            gbTareas.Controls.Add(lblDescripcion);
+            gbTareas.Controls.Add(lblCodigo);
+            gbTareas.Controls.Add(txtDescripcion);
+            gbTareas.Controls.Add(txtCodigo);
+            gbTareas.Controls.Add(btnRegistrar);
+            gbTareas.Dock = DockStyle.Fill;
+            gbTareas.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            gbTareas.ForeColor = Color.White;
+            gbTareas.Location = new Point(10, 10);
+            gbTareas.Name = "gbTareas";
+            gbTareas.Size = new Size(750, 187);
+            gbTareas.TabIndex = 1;
+            gbTareas.TabStop = false;
+            gbTareas.Text = "Registrar Nueva Tarea:";
             // 
-            // Fecha
+            // mtxtHora
             // 
-            Fecha.HeaderText = "Fecha";
-            Fecha.Name = "Fecha";
-            Fecha.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre:";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Apellido:";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Tarea:";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Hora Inicio:";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Hora Final:";
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(btnVolverArea);
-            groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Controls.Add(textBox4);
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(textBox2);
-            groupBox2.Controls.Add(textBox1);
-            groupBox2.Controls.Add(Registrar);
-            groupBox2.Dock = DockStyle.Fill;
-            groupBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(20, 20);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(730, 197);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Registrar Nueva Tarea:";
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Location = new Point(259, 41);
-            label4.Name = "label4";
-            label4.Size = new Size(157, 20);
-            label4.TabIndex = 11;
-            label4.Text = "Hora de Finalizacion:";
+            mtxtHora.Anchor = AnchorStyles.None;
+            mtxtHora.BackColor = Color.FromArgb(176, 140, 145);
+            mtxtHora.BorderStyle = BorderStyle.None;
+            mtxtHora.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            mtxtHora.ForeColor = Color.White;
+            mtxtHora.Location = new Point(132, 49);
+            mtxtHora.Mask = "00:00";
+            mtxtHora.Name = "mtxtHora";
+            mtxtHora.ShortcutsEnabled = false;
+            mtxtHora.Size = new Size(108, 24);
+            mtxtHora.TabIndex = 12;
+            mtxtHora.Text = "0000";
+            mtxtHora.TextAlign = HorizontalAlignment.Center;
+            mtxtHora.ValidatingType = typeof(DateTime);
+            mtxtHora.MouseClick += mtxtHora_MouseClick;
+            mtxtHora.KeyPress += ValidacionDeFormato;
+            mtxtHora.MouseLeave += mtxtHora_MouseLeave;
             // 
             // btnVolverArea
             // 
@@ -187,126 +148,102 @@
             btnVolverArea.Cursor = Cursors.Hand;
             btnVolverArea.FlatStyle = FlatStyle.Popup;
             btnVolverArea.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnVolverArea.Location = new Point(599, 152);
+            btnVolverArea.Location = new Point(623, 151);
             btnVolverArea.Name = "btnVolverArea";
             btnVolverArea.Size = new Size(121, 30);
             btnVolverArea.TabIndex = 2;
             btnVolverArea.Text = "Volver";
             btnVolverArea.UseVisualStyleBackColor = false;
-            btnVolverArea.Click += SeleccionButtons;
             // 
-            // label3
+            // lblHoraInicio
             // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.Location = new Point(142, 41);
-            label3.Name = "label3";
-            label3.Size = new Size(111, 20);
-            label3.TabIndex = 10;
-            label3.Text = "Hora de Inicio:";
+            lblHoraInicio.Anchor = AnchorStyles.None;
+            lblHoraInicio.AutoSize = true;
+            lblHoraInicio.Location = new Point(129, 26);
+            lblHoraInicio.Name = "lblHoraInicio";
+            lblHoraInicio.Size = new Size(111, 20);
+            lblHoraInicio.TabIndex = 10;
+            lblHoraInicio.Text = "Hora de Inicio:";
             // 
-            // label2
+            // lblDescripcion
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Location = new Point(22, 93);
-            label2.Name = "label2";
-            label2.Size = new Size(151, 20);
-            label2.TabIndex = 9;
-            label2.Text = "Tarea (Descripcion):";
+            lblDescripcion.Anchor = AnchorStyles.None;
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.Location = new Point(12, 78);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(151, 20);
+            lblDescripcion.TabIndex = 9;
+            lblDescripcion.Text = "Tarea (Descripcion):";
             // 
-            // label1
+            // lblCodigo
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Location = new Point(22, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 20);
-            label1.TabIndex = 8;
-            label1.Text = "Codigo:";
+            lblCodigo.Anchor = AnchorStyles.None;
+            lblCodigo.AutoSize = true;
+            lblCodigo.Location = new Point(12, 26);
+            lblCodigo.Name = "lblCodigo";
+            lblCodigo.Size = new Size(63, 20);
+            lblCodigo.TabIndex = 8;
+            lblCodigo.Text = "Codigo:";
             // 
-            // textBox4
+            // txtDescripcion
             // 
-            textBox4.Anchor = AnchorStyles.None;
-            textBox4.BackColor = Color.FromArgb(176, 140, 145);
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.ForeColor = Color.White;
-            textBox4.Location = new Point(142, 64);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 24);
-            textBox4.TabIndex = 7;
+            txtDescripcion.Anchor = AnchorStyles.None;
+            txtDescripcion.BackColor = Color.FromArgb(176, 140, 145);
+            txtDescripcion.BorderStyle = BorderStyle.None;
+            txtDescripcion.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDescripcion.ForeColor = Color.White;
+            txtDescripcion.Location = new Point(12, 100);
+            txtDescripcion.Multiline = true;
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(394, 67);
+            txtDescripcion.TabIndex = 3;
             // 
-            // textBox3
+            // txtCodigo
             // 
-            textBox3.Anchor = AnchorStyles.None;
-            textBox3.BackColor = Color.FromArgb(176, 140, 145);
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.ForeColor = Color.White;
-            textBox3.Location = new Point(261, 64);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 24);
-            textBox3.TabIndex = 5;
+            txtCodigo.Anchor = AnchorStyles.None;
+            txtCodigo.BackColor = Color.FromArgb(176, 140, 145);
+            txtCodigo.BorderStyle = BorderStyle.None;
+            txtCodigo.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCodigo.ForeColor = Color.White;
+            txtCodigo.Location = new Point(12, 49);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(100, 24);
+            txtCodigo.TabIndex = 1;
             // 
-            // textBox2
+            // btnRegistrar
             // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.BackColor = Color.FromArgb(176, 140, 145);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(22, 115);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(394, 67);
-            textBox2.TabIndex = 3;
+            btnRegistrar.Anchor = AnchorStyles.None;
+            btnRegistrar.BackColor = Color.Green;
+            btnRegistrar.Cursor = Cursors.Hand;
+            btnRegistrar.FlatStyle = FlatStyle.Popup;
+            btnRegistrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRegistrar.Location = new Point(485, 151);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(133, 30);
+            btnRegistrar.TabIndex = 0;
+            btnRegistrar.Text = "Registrar";
+            btnRegistrar.UseVisualStyleBackColor = false;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
-            // textBox1
+            // pHistorial
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.BackColor = Color.FromArgb(176, 140, 145);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(22, 64);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 24);
-            textBox1.TabIndex = 1;
+            pHistorial.Controls.Add(gbHistorial);
+            pHistorial.Dock = DockStyle.Top;
+            pHistorial.Location = new Point(0, 0);
+            pHistorial.Name = "pHistorial";
+            pHistorial.Padding = new Padding(10);
+            pHistorial.Size = new Size(770, 261);
+            pHistorial.TabIndex = 3;
             // 
-            // Registrar
+            // pTareas
             // 
-            Registrar.Anchor = AnchorStyles.None;
-            Registrar.BackColor = Color.Green;
-            Registrar.Cursor = Cursors.Hand;
-            Registrar.FlatStyle = FlatStyle.Popup;
-            Registrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            Registrar.Location = new Point(460, 152);
-            Registrar.Name = "Registrar";
-            Registrar.Size = new Size(133, 30);
-            Registrar.TabIndex = 0;
-            Registrar.Text = "Registrar";
-            Registrar.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(groupBox1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Padding = new Padding(20);
-            panel1.Size = new Size(770, 231);
-            panel1.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(groupBox2);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 231);
-            panel2.Name = "panel2";
-            panel2.Padding = new Padding(20);
-            panel2.Size = new Size(770, 237);
-            panel2.TabIndex = 4;
+            pTareas.Controls.Add(gbTareas);
+            pTareas.Dock = DockStyle.Fill;
+            pTareas.Location = new Point(0, 261);
+            pTareas.Name = "pTareas";
+            pTareas.Padding = new Padding(10);
+            pTareas.Size = new Size(770, 207);
+            pTareas.TabIndex = 4;
             // 
             // FrmAreaRegistro
             // 
@@ -315,43 +252,35 @@
             BackColor = Color.FromArgb(144, 93, 101);
             ClientSize = new Size(770, 468);
             ControlBox = false;
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(pTareas);
+            Controls.Add(pHistorial);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmAreaRegistro";
             Text = "FrmAreaRegistro";
-            groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
+            Load += FrmAreaRegistro_Load;
+            gbHistorial.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvHistorialTareas).EndInit();
+            gbTareas.ResumeLayout(false);
+            gbTareas.PerformLayout();
+            pHistorial.ResumeLayout(false);
+            pTareas.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private GroupBox groupBox1;
-        private DataGridView dataGridView1;
-        private GroupBox groupBox2;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Button Registrar;
+        private GroupBox gbHistorial;
+        private DataGridView dgvHistorialTareas;
+        private GroupBox gbTareas;
+        private Label lblHoraInicio;
+        private Label lblDescripcion;
+        private Label lblCodigo;
+        private TextBox txtDescripcion;
+        private TextBox txtCodigo;
+        private Button btnRegistrar;
         private Button btnVolverArea;
-        private Panel panel1;
-        private Panel panel2;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Fecha;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
+        private Panel pHistorial;
+        private Panel pTareas;
+        private MaskedTextBox mtxtHora;
     }
 }

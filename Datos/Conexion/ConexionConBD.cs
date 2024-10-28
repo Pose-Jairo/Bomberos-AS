@@ -1,14 +1,34 @@
 ﻿using System;
 using System.Data;
+using Microsoft.Data.Sql;
 using Microsoft.Data.SqlClient;
+using Microsoft.Win32;
 
 namespace Datos.Conexion
 {
     public class ConexionConBD
     {
-        //cambien a localhost y Bomberos
-        static private string strConexion = "Server=DESKTOP-6E28961\\SQLEXPRESS; Initial Catalog = Bomberos2; Integrated Security = true;TrustServerCertificate=True;";  
+        public static string ObtenerServer()
+        {        
+            string server = Environment.MachineName;
 
+            RegistryKey rk = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server");
+            String[]? instances = (String[])rk.GetValue("InstalledInstances");
+            if (instances.Length > 0)
+            {
+                foreach (String element in instances)
+                {
+                    string Server = server + "\\" + element + ";";
+                    return Server ;
+                }
+            }
+            return null;
+        }
+
+
+        static string server = ObtenerServer(); 
+
+        static private string strConexion = @"Data Source=" + server + " Initial Catalog = Bomberos; Integrated Security = true;TrustServerCertificate=True;";  
         public SqlConnection Conexion {  get; set; }
         public SqlCommand Orden {  get; set; }
 

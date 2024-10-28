@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "E:\\Bomberos A-S\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|e:\\bomberos a-s\\presentacion\\formularios\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|e:\\bomberos a-s\\presentacion\\formularios\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|e:\\bomberos a-s\\presentacion\\formularios\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB6539E1-5E25-42B3-BA61-C43C3B55E312}|Datos\\Datos.csproj|e:\\bomberos a-s\\datos\\conexion\\conexionconbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB6539E1-5E25-42B3-BA61-C43C3B55E312}|Datos\\Datos.csproj|solutionrelative:datos\\conexion\\conexionconbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|E:\\Bomberos A-S\\presentacion\\formularios\\frmarearegistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|e:\\bomberos a-s\\presentacion\\formularios\\frmarearegistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\frmarearegistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|e:\\bomberos a-s\\presentacion\\formularios\\frmarearegistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\frmarearegistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A23ED24A-0EF6-4393-9969-BCBB19A4D3B8}|Logica\\Logica.csproj|e:\\bomberos a-s\\logica\\negocio\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A23ED24A-0EF6-4393-9969-BCBB19A4D3B8}|Logica\\Logica.csproj|solutionrelative:logica\\negocio\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|E:\\Bomberos A-S\\presentacion\\formularios\\frmadministracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{43A1813E-70E5-46CA-9DC4-C50995CB1436}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularios\\frmadministracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB6539E1-5E25-42B3-BA61-C43C3B55E312}|Datos\\Datos.csproj|e:\\bomberos a-s\\datos\\conexion\\conexionconbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB6539E1-5E25-42B3-BA61-C43C3B55E312}|Datos\\Datos.csproj|solutionrelative:datos\\conexion\\conexionconbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A23ED24A-0EF6-4393-9969-BCBB19A4D3B8}|Logica\\Logica.csproj|e:\\bomberos a-s\\logica\\negocio\\validaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23ED24A-0EF6-4393-9969-BCBB19A4D3B8}|Logica\\Logica.csproj|solutionrelative:logica\\negocio\\validaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,39 +39,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Consultas.cs [Design]",
-              "DocumentMoniker": "E:\\Bomberos A-S\\Presentacion\\Formularios\\Consultas.cs",
-              "RelativeDocumentMoniker": "Presentacion\\Formularios\\Consultas.cs",
-              "ToolTip": "E:\\Bomberos A-S\\Presentacion\\Formularios\\Consultas.cs [Design]",
-              "RelativeToolTip": "Presentacion\\Formularios\\Consultas.cs [Design]",
+              "Title": "FrmMain.cs",
+              "DocumentMoniker": "E:\\Bomberos A-S\\Presentacion\\Formularios\\FrmMain.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Formularios\\FrmMain.cs",
+              "ToolTip": "E:\\Bomberos A-S\\Presentacion\\Formularios\\FrmMain.cs",
+              "RelativeToolTip": "Presentacion\\Formularios\\FrmMain.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwC4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T22:46:21.517Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Consultas.cs",
-              "DocumentMoniker": "E:\\Bomberos A-S\\Presentacion\\Formularios\\Consultas.cs",
-              "RelativeDocumentMoniker": "Presentacion\\Formularios\\Consultas.cs",
-              "ToolTip": "E:\\Bomberos A-S\\Presentacion\\Formularios\\Consultas.cs",
-              "RelativeToolTip": "Presentacion\\Formularios\\Consultas.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCcAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T22:41:59.229Z",
+              "WhenOpened": "2024-10-28T17:10:07.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmAdministracion.cs [Design]",
-              "DocumentMoniker": "E:\\Bomberos A-S\\Presentacion\\Formularios\\FrmAdministracion.cs",
-              "RelativeDocumentMoniker": "Presentacion\\Formularios\\FrmAdministracion.cs",
-              "ToolTip": "E:\\Bomberos A-S\\Presentacion\\Formularios\\FrmAdministracion.cs [Design]",
-              "RelativeToolTip": "Presentacion\\Formularios\\FrmAdministracion.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "FrmAreaRegistro.cs",
+              "DocumentMoniker": "E:\\Bomberos A-S\\Presentacion\\Formularios\\FrmAreaRegistro.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Formularios\\FrmAreaRegistro.cs",
+              "ToolTip": "E:\\Bomberos A-S\\Presentacion\\Formularios\\FrmAreaRegistro.cs",
+              "RelativeToolTip": "Presentacion\\Formularios\\FrmAreaRegistro.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAIA1wDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T23:57:14.577Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-21T22:08:24.618Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -82,34 +71,45 @@
               "ToolTip": "E:\\Bomberos A-S\\Presentacion\\Formularios\\FrmAreaRegistro.cs [Design]",
               "RelativeToolTip": "Presentacion\\Formularios\\FrmAreaRegistro.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T23:53:24.827Z",
+              "WhenOpened": "2024-10-28T16:40:32.434Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Metodos.cs",
-              "DocumentMoniker": "E:\\Bomberos A-S\\Logica\\Negocio\\Metodos.cs",
-              "RelativeDocumentMoniker": "Logica\\Negocio\\Metodos.cs",
-              "ToolTip": "E:\\Bomberos A-S\\Logica\\Negocio\\Metodos.cs",
-              "RelativeToolTip": "Logica\\Negocio\\Metodos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T23:22:32.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "ConexionConBD.cs",
               "DocumentMoniker": "E:\\Bomberos A-S\\Datos\\Conexion\\ConexionConBD.cs",
               "RelativeDocumentMoniker": "Datos\\Conexion\\ConexionConBD.cs",
               "ToolTip": "E:\\Bomberos A-S\\Datos\\Conexion\\ConexionConBD.cs",
               "RelativeToolTip": "Datos\\Conexion\\ConexionConBD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABjAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T22:37:12.01Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Metodos.cs",
+              "DocumentMoniker": "E:\\Bomberos A-S\\Logica\\Negocio\\Metodos.cs",
+              "RelativeDocumentMoniker": "Logica\\Negocio\\Metodos.cs",
+              "ToolTip": "E:\\Bomberos A-S\\Logica\\Negocio\\Metodos.cs",
+              "RelativeToolTip": "Logica\\Negocio\\Metodos.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAArwAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T23:22:32.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Validaciones.cs",
+              "DocumentMoniker": "E:\\Bomberos A-S\\Logica\\Negocio\\Validaciones.cs",
+              "RelativeDocumentMoniker": "Logica\\Negocio\\Validaciones.cs",
+              "ToolTip": "E:\\Bomberos A-S\\Logica\\Negocio\\Validaciones.cs",
+              "RelativeToolTip": "Logica\\Negocio\\Validaciones.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T23:57:45.421Z"
             }
           ]
         }
