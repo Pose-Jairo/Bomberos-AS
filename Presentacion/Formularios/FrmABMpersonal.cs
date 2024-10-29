@@ -34,7 +34,14 @@ namespace Presentacion.Formularios
         private void FrmABMpersonal_Load(object sender, EventArgs e)
         {
             Tabla.Clear();
-            Tabla.Load(ClaseConexion.LectorSql("Select * from bombero"));
+            if (cbSelectAll.Checked == false)
+            {
+                Tabla.Load(ClaseConexion.LectorSql("select bombero.cod_bombero,bombero.nombre, bombero.apellido,bombero.estado, rango.rango,area.nombre from bombero inner join rango on rango.cod_rango = bombero.cod_rango inner join area on area.cod_area = bombero.cod_area where estado = 1"));
+            }
+            else if (cbSelectAll.Checked == true)
+            {
+                Tabla.Load(ClaseConexion.LectorSql("select bombero.cod_bombero,bombero.nombre, bombero.apellido,bombero.estado, rango.rango,area.nombre from bombero inner join rango on rango.cod_rango = bombero.cod_rango inner join area on area.cod_area = bombero.cod_area"));
+            }
             //asigna los datos a la tabla...
             dgvTablaPersonal.DataSource = Tabla;
 
@@ -53,6 +60,8 @@ namespace Presentacion.Formularios
             cmbArea.DisplayMember = "nombre";
             cmbArea.ValueMember = "dod_area";
             cmbArea.DataSource = metodo.Carga_Area();
+
+            limpiartext();
 
         }
 
@@ -80,6 +89,28 @@ namespace Presentacion.Formularios
 
         private void btnMod_Click(object sender, EventArgs e)
         {
+            //ejecuta la modificacion de un registro
+            bool mod = false;
+            int areamod = cmbArea.SelectedIndex + 1;
+            int rangomod = cmbRango.SelectedIndex + 1;
+            int activo = Convert.ToInt32(cbActivo.Checked);
+
+            mod = ClaseConexion.EjecutarConsulta("update bombero set nombre ='"
+                    + txtNombre.Text + "', apellido = '"
+                    + txtApellido.Text + "', estado = "
+                    + activo + ", cod_rango = "
+                    + rangomod + ", cod_area = "
+                    + areamod + " where cod_bombero = " + txtCodBom.Text + ";");
+            if (mod == true)
+            {
+                MessageBox.Show("Se Modifico con exito!");
+                //se llama al vento load del formulario para recargar la grilla...
+                FrmABMpersonal_Load(null, null);
+            }
+            else
+            {
+                MessageBox.Show("ERROR al ejecutar la consulta...!");
+            }
 
         }
 
@@ -87,19 +118,93 @@ namespace Presentacion.Formularios
         {
             if (e.RowIndex != -1 && (rbElimReg.Checked || rbModReg.Checked))
             {
+                txtCodBom.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["cod_bombero"].Value.ToString();
                 txtNombre.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
                 txtApellido.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["apellido"].Value.ToString();
-                var cellRango = dgvTablaPersonal.Rows[e.RowIndex].Cells["rango"].Value.ToString;
-                foreach (var item in cmbRango.Items)
+                cmbRango.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["rango"].Value.ToString();
+                cmbArea.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["nombre1"].Value.ToString();
+                var estadoVal = dgvTablaPersonal.Rows[e.RowIndex].Cells["estado"].Value;
+                if (estadoVal is bool)
                 {
-                    if (item.ToString == cellRango)
-                    {
-                        cmbRango.SelectedItem = item;
-                        break;
-                    }
+                    cbActivo.Checked = (bool)estadoVal;
                 }
-                var cellArea = dgvTablaPersonal.Rows[e.RowIndex].Cells["area"].Value.ToString();
+                if (estadoVal is int)
+                {
+                    cbActivo.Checked = (int)estadoVal == 1;
+                }
             }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            int activo = 0;
+            DialogResult Respuesta = MessageBox.Show("esta seguro de dar de baja el usuario?", "Confirmacion", MessageBoxButtons.YesNo);
+            if (Respuesta == DialogResult.Yes)
+            {
+                if (ClaseConexion.EjecutarConsulta("update bombero set estado =" + activo + " where cod_bombero =" + txtCodBom.Text + ";"))
+                {
+                    MessageBox.Show("Se dio de baja el usuario!", "Proceso finalizado:");
+                    FrmABMpersonal_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo completar la operación", "Error en el procedimiento:");
+                }
+            }
+        }
+
+        private void rbAgregarReg_CheckedChanged(object sender, EventArgs e)
+        {
+            btnEjecutar.Enabled = true;
+            btnDel.Enabled = false;
+            btnMod.Enabled = false;
+            txtApellido.Enabled = true;
+            txtNombre.Enabled = true;
+            cmbArea.Enabled = true;
+            cmbRango.Enabled = true;
+            cbActivo.Enabled = true;
+            cbActivo.Visible = false;
+            limpiartext();
+        }
+
+        private void rbModReg_CheckedChanged(object sender, EventArgs e)
+        {
+            btnMod.Enabled = true;
+            btnEjecutar.Enabled = false;
+            btnDel.Enabled = false;
+            txtApellido.Enabled = true;
+            txtNombre.Enabled = true;
+            cmbArea.Enabled = true;
+            cmbRango.Enabled = true;
+            cbActivo.Enabled = true;
+            cbActivo.Visible = true;
+        }
+
+        private void rbElimReg_CheckedChanged(object sender, EventArgs e)
+        {
+            btnDel.Enabled = true;
+            btnEjecutar.Enabled = false;
+            btnMod.Enabled = false;
+            txtApellido.Enabled = false;
+            txtNombre.Enabled = false;
+            cmbArea.Enabled = false;
+            cmbRango.Enabled = false;
+            cbActivo.Enabled = false;
+            cbActivo.Visible = false;
+        }
+
+        private void limpiartext()
+        {
+            txtCodBom.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            cmbArea.Text = "";
+            cmbRango.Text = "";
+        }
+
+        private void cbSelectAll_CheckedChanged(object sender, EventArgs e)
+        {
+            FrmABMpersonal_Load(null, null);
         }
     }
 }
