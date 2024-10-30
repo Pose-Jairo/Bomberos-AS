@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             gbSuperior = new GroupBox();
             pIzquierdo = new Panel();
             dgvTablaPersonal = new DataGridView();
@@ -41,8 +42,6 @@
             groupBox3 = new GroupBox();
             txtCodBom = new TextBox();
             label7 = new Label();
-            btnDel = new Button();
-            btnMod = new Button();
             txtContrasena = new TextBox();
             cbActivo = new CheckBox();
             cbPermiso = new CheckBox();
@@ -105,6 +104,7 @@
             // 
             dgvTablaPersonal.AllowUserToAddRows = false;
             dgvTablaPersonal.AllowUserToDeleteRows = false;
+            dgvTablaPersonal.AllowUserToResizeRows = false;
             dgvTablaPersonal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTablaPersonal.BackgroundColor = Color.FromArgb(176, 140, 145);
             dgvTablaPersonal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -115,6 +115,8 @@
             dgvTablaPersonal.Name = "dgvTablaPersonal";
             dgvTablaPersonal.ReadOnly = true;
             dgvTablaPersonal.RowHeadersVisible = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(176, 140, 145);
+            dgvTablaPersonal.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvTablaPersonal.RowTemplate.Height = 25;
             dgvTablaPersonal.Size = new Size(495, 301);
             dgvTablaPersonal.TabIndex = 0;
@@ -208,8 +210,6 @@
             // 
             groupBox3.Controls.Add(txtCodBom);
             groupBox3.Controls.Add(label7);
-            groupBox3.Controls.Add(btnDel);
-            groupBox3.Controls.Add(btnMod);
             groupBox3.Controls.Add(txtContrasena);
             groupBox3.Controls.Add(cbActivo);
             groupBox3.Controls.Add(cbPermiso);
@@ -256,36 +256,6 @@
             label7.Size = new Size(54, 16);
             label7.TabIndex = 20;
             label7.Text = "Codigo:";
-            // 
-            // btnDel
-            // 
-            btnDel.Anchor = AnchorStyles.Left;
-            btnDel.BackColor = Color.Crimson;
-            btnDel.Enabled = false;
-            btnDel.FlatStyle = FlatStyle.Popup;
-            btnDel.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDel.Location = new Point(260, 202);
-            btnDel.Name = "btnDel";
-            btnDel.Size = new Size(119, 35);
-            btnDel.TabIndex = 19;
-            btnDel.Text = "Eliminar";
-            btnDel.UseVisualStyleBackColor = false;
-            btnDel.Click += btnDel_Click;
-            // 
-            // btnMod
-            // 
-            btnMod.Anchor = AnchorStyles.Left;
-            btnMod.BackColor = Color.Teal;
-            btnMod.Enabled = false;
-            btnMod.FlatStyle = FlatStyle.Popup;
-            btnMod.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnMod.Location = new Point(135, 202);
-            btnMod.Name = "btnMod";
-            btnMod.Size = new Size(119, 35);
-            btnMod.TabIndex = 18;
-            btnMod.Text = "Modificar";
-            btnMod.UseVisualStyleBackColor = false;
-            btnMod.Click += btnMod_Click;
             // 
             // txtContrasena
             // 
@@ -346,9 +316,9 @@
             btnVolverBomberos.BackColor = Color.Red;
             btnVolverBomberos.FlatStyle = FlatStyle.Popup;
             btnVolverBomberos.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnVolverBomberos.Location = new Point(641, 202);
+            btnVolverBomberos.Location = new Point(687, 211);
             btnVolverBomberos.Name = "btnVolverBomberos";
-            btnVolverBomberos.Size = new Size(142, 35);
+            btnVolverBomberos.Size = new Size(96, 26);
             btnVolverBomberos.TabIndex = 3;
             btnVolverBomberos.Text = "Volver";
             btnVolverBomberos.UseVisualStyleBackColor = false;
@@ -356,7 +326,7 @@
             // 
             // gbAcciones
             // 
-            gbAcciones.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            gbAcciones.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             gbAcciones.Controls.Add(rbElimReg);
             gbAcciones.Controls.Add(rbModReg);
             gbAcciones.Controls.Add(rbAgregarReg);
@@ -413,15 +383,15 @@
             // 
             // btnEjecutar
             // 
-            btnEjecutar.Anchor = AnchorStyles.Left;
+            btnEjecutar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnEjecutar.BackColor = Color.Green;
             btnEjecutar.FlatStyle = FlatStyle.Popup;
             btnEjecutar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEjecutar.Location = new Point(10, 202);
+            btnEjecutar.Location = new Point(548, 202);
             btnEjecutar.Name = "btnEjecutar";
-            btnEjecutar.Size = new Size(119, 35);
+            btnEjecutar.Size = new Size(133, 35);
             btnEjecutar.TabIndex = 9;
-            btnEjecutar.Text = "Agregar";
+            btnEjecutar.Text = "Continuar";
             btnEjecutar.UseVisualStyleBackColor = false;
             btnEjecutar.Click += btnEjecutar_Click;
             // 
@@ -588,8 +558,6 @@
         private CheckBox cbPermiso;
         private TextBox txtContrasena;
         private CheckBox cbActivo;
-        private Button btnDel;
-        private Button btnMod;
         private TextBox txtCodBom;
         private GroupBox groupBox1;
         private CheckBox cbSelectAll;
