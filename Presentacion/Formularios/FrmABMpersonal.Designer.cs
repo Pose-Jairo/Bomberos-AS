@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             gbSuperior = new GroupBox();
             pIzquierdo = new Panel();
             dgvTablaPersonal = new DataGridView();
             pDerecha = new Panel();
+            groupBox1 = new GroupBox();
+            cbSelectAll = new CheckBox();
             gbDerecha = new GroupBox();
             btnFiltrar = new Button();
             txtFiltraNom = new TextBox();
-            cmbFiltraRango = new ComboBox();
-            txtFiltraCodigo = new TextBox();
             label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
             groupBox3 = new GroupBox();
+            txtCodBom = new TextBox();
+            label7 = new Label();
             txtContrasena = new TextBox();
             cbActivo = new CheckBox();
             cbPermiso = new CheckBox();
@@ -61,12 +62,11 @@
             pSuperior = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
-            btnMod = new Button();
-            btnDel = new Button();
             gbSuperior.SuspendLayout();
             pIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTablaPersonal).BeginInit();
             pDerecha.SuspendLayout();
+            groupBox1.SuspendLayout();
             gbDerecha.SuspendLayout();
             groupBox3.SuspendLayout();
             gbAcciones.SuspendLayout();
@@ -102,14 +102,21 @@
             // 
             // dgvTablaPersonal
             // 
+            dgvTablaPersonal.AllowUserToAddRows = false;
+            dgvTablaPersonal.AllowUserToDeleteRows = false;
+            dgvTablaPersonal.AllowUserToResizeRows = false;
             dgvTablaPersonal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTablaPersonal.BackgroundColor = Color.FromArgb(176, 140, 145);
             dgvTablaPersonal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTablaPersonal.Dock = DockStyle.Fill;
+            dgvTablaPersonal.GridColor = SystemColors.ActiveCaptionText;
             dgvTablaPersonal.Location = new Point(5, 5);
             dgvTablaPersonal.Margin = new Padding(5);
             dgvTablaPersonal.Name = "dgvTablaPersonal";
+            dgvTablaPersonal.ReadOnly = true;
             dgvTablaPersonal.RowHeadersVisible = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(176, 140, 145);
+            dgvTablaPersonal.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvTablaPersonal.RowTemplate.Height = 25;
             dgvTablaPersonal.Size = new Size(495, 301);
             dgvTablaPersonal.TabIndex = 0;
@@ -117,6 +124,7 @@
             // 
             // pDerecha
             // 
+            pDerecha.Controls.Add(groupBox1);
             pDerecha.Controls.Add(gbDerecha);
             pDerecha.Dock = DockStyle.Right;
             pDerecha.Location = new Point(510, 20);
@@ -125,22 +133,42 @@
             pDerecha.Size = new Size(275, 311);
             pDerecha.TabIndex = 2;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(cbSelectAll);
+            groupBox1.Dock = DockStyle.Top;
+            groupBox1.ForeColor = Color.White;
+            groupBox1.Location = new Point(5, 5);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(265, 64);
+            groupBox1.TabIndex = 2;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Condicion de lectura:";
+            // 
+            // cbSelectAll
+            // 
+            cbSelectAll.AutoSize = true;
+            cbSelectAll.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            cbSelectAll.Location = new Point(13, 25);
+            cbSelectAll.Name = "cbSelectAll";
+            cbSelectAll.Size = new Size(220, 24);
+            cbSelectAll.TabIndex = 0;
+            cbSelectAll.Text = "Ver Todos los Registros";
+            cbSelectAll.UseVisualStyleBackColor = true;
+            cbSelectAll.CheckedChanged += cbSelectAll_CheckedChanged;
+            // 
             // gbDerecha
             // 
             gbDerecha.Controls.Add(btnFiltrar);
             gbDerecha.Controls.Add(txtFiltraNom);
-            gbDerecha.Controls.Add(cmbFiltraRango);
-            gbDerecha.Controls.Add(txtFiltraCodigo);
             gbDerecha.Controls.Add(label3);
-            gbDerecha.Controls.Add(label2);
-            gbDerecha.Controls.Add(label1);
-            gbDerecha.Dock = DockStyle.Fill;
+            gbDerecha.Dock = DockStyle.Bottom;
             gbDerecha.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             gbDerecha.ForeColor = Color.White;
-            gbDerecha.Location = new Point(5, 5);
+            gbDerecha.Location = new Point(5, 87);
             gbDerecha.Name = "gbDerecha";
             gbDerecha.Padding = new Padding(0);
-            gbDerecha.Size = new Size(265, 301);
+            gbDerecha.Size = new Size(265, 219);
             gbDerecha.TabIndex = 1;
             gbDerecha.TabStop = false;
             gbDerecha.Text = "Filtros de Busqueda:";
@@ -151,7 +179,7 @@
             btnFiltrar.BackColor = Color.DarkGreen;
             btnFiltrar.FlatStyle = FlatStyle.Popup;
             btnFiltrar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFiltrar.Location = new Point(86, 218);
+            btnFiltrar.Location = new Point(71, 108);
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.Size = new Size(113, 39);
             btnFiltrar.TabIndex = 6;
@@ -164,66 +192,24 @@
             txtFiltraNom.BorderStyle = BorderStyle.None;
             txtFiltraNom.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtFiltraNom.ForeColor = Color.White;
-            txtFiltraNom.Location = new Point(146, 136);
+            txtFiltraNom.Location = new Point(45, 48);
             txtFiltraNom.Name = "txtFiltraNom";
-            txtFiltraNom.Size = new Size(100, 19);
+            txtFiltraNom.Size = new Size(179, 19);
             txtFiltraNom.TabIndex = 5;
-            // 
-            // cmbFiltraRango
-            // 
-            cmbFiltraRango.BackColor = Color.FromArgb(176, 140, 145);
-            cmbFiltraRango.FlatStyle = FlatStyle.Flat;
-            cmbFiltraRango.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbFiltraRango.ForeColor = Color.White;
-            cmbFiltraRango.FormattingEnabled = true;
-            cmbFiltraRango.Items.AddRange(new object[] { "Oficial", "SubOficial", "Bombero", "Cadete" });
-            cmbFiltraRango.Location = new Point(146, 90);
-            cmbFiltraRango.Name = "cmbFiltraRango";
-            cmbFiltraRango.Size = new Size(100, 28);
-            cmbFiltraRango.TabIndex = 4;
-            // 
-            // txtFiltraCodigo
-            // 
-            txtFiltraCodigo.BackColor = Color.FromArgb(176, 140, 145);
-            txtFiltraCodigo.BorderStyle = BorderStyle.None;
-            txtFiltraCodigo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtFiltraCodigo.ForeColor = Color.White;
-            txtFiltraCodigo.Location = new Point(146, 46);
-            txtFiltraCodigo.Name = "txtFiltraCodigo";
-            txtFiltraCodigo.Size = new Size(100, 19);
-            txtFiltraCodigo.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(18, 139);
+            label3.Location = new Point(71, 29);
             label3.Name = "label3";
             label3.Size = new Size(122, 16);
             label3.TabIndex = 2;
             label3.Text = "Nombre y Apellido:";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(18, 49);
-            label2.Name = "label2";
-            label2.Size = new Size(54, 16);
-            label2.TabIndex = 1;
-            label2.Text = "Codigo:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(18, 93);
-            label1.Name = "label1";
-            label1.Size = new Size(51, 16);
-            label1.TabIndex = 0;
-            label1.Text = "Rango:";
-            // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(btnDel);
-            groupBox3.Controls.Add(btnMod);
+            groupBox3.Controls.Add(txtCodBom);
+            groupBox3.Controls.Add(label7);
             groupBox3.Controls.Add(txtContrasena);
             groupBox3.Controls.Add(cbActivo);
             groupBox3.Controls.Add(cbPermiso);
@@ -248,8 +234,32 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Control de personal:";
             // 
+            // txtCodBom
+            // 
+            txtCodBom.Anchor = AnchorStyles.Left;
+            txtCodBom.BackColor = Color.FromArgb(176, 140, 145);
+            txtCodBom.BorderStyle = BorderStyle.None;
+            txtCodBom.Enabled = false;
+            txtCodBom.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCodBom.ForeColor = Color.White;
+            txtCodBom.Location = new Point(70, 26);
+            txtCodBom.Name = "txtCodBom";
+            txtCodBom.Size = new Size(100, 19);
+            txtCodBom.TabIndex = 21;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Left;
+            label7.AutoSize = true;
+            label7.Location = new Point(10, 26);
+            label7.Name = "label7";
+            label7.Size = new Size(54, 16);
+            label7.TabIndex = 20;
+            label7.Text = "Codigo:";
+            // 
             // txtContrasena
             // 
+            txtContrasena.Enabled = false;
             txtContrasena.Location = new Point(201, 68);
             txtContrasena.Name = "txtContrasena";
             txtContrasena.Size = new Size(157, 22);
@@ -260,14 +270,16 @@
             cbActivo.AutoSize = true;
             cbActivo.Location = new Point(201, 121);
             cbActivo.Name = "cbActivo";
-            cbActivo.Size = new Size(163, 20);
+            cbActivo.Size = new Size(154, 20);
             cbActivo.TabIndex = 16;
-            cbActivo.Text = "El usuario esta inactivo";
+            cbActivo.Text = "El usuario esta Activo";
             cbActivo.UseVisualStyleBackColor = true;
+            cbActivo.Visible = false;
             // 
             // cbPermiso
             // 
             cbPermiso.AutoSize = true;
+            cbPermiso.Enabled = false;
             cbPermiso.Location = new Point(201, 26);
             cbPermiso.Name = "cbPermiso";
             cbPermiso.Size = new Size(179, 36);
@@ -279,7 +291,7 @@
             // 
             label9.Anchor = AnchorStyles.Left;
             label9.AutoSize = true;
-            label9.Location = new Point(22, 158);
+            label9.Location = new Point(25, 147);
             label9.Name = "label9";
             label9.Size = new Size(39, 16);
             label9.TabIndex = 14;
@@ -293,7 +305,7 @@
             cmbArea.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbArea.ForeColor = Color.White;
             cmbArea.FormattingEnabled = true;
-            cmbArea.Location = new Point(70, 152);
+            cmbArea.Location = new Point(70, 147);
             cmbArea.Name = "cmbArea";
             cmbArea.Size = new Size(100, 28);
             cmbArea.TabIndex = 13;
@@ -304,9 +316,9 @@
             btnVolverBomberos.BackColor = Color.Red;
             btnVolverBomberos.FlatStyle = FlatStyle.Popup;
             btnVolverBomberos.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnVolverBomberos.Location = new Point(641, 202);
+            btnVolverBomberos.Location = new Point(687, 211);
             btnVolverBomberos.Name = "btnVolverBomberos";
-            btnVolverBomberos.Size = new Size(142, 35);
+            btnVolverBomberos.Size = new Size(96, 26);
             btnVolverBomberos.TabIndex = 3;
             btnVolverBomberos.Text = "Volver";
             btnVolverBomberos.UseVisualStyleBackColor = false;
@@ -314,14 +326,14 @@
             // 
             // gbAcciones
             // 
-            gbAcciones.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            gbAcciones.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             gbAcciones.Controls.Add(rbElimReg);
             gbAcciones.Controls.Add(rbModReg);
             gbAcciones.Controls.Add(rbAgregarReg);
             gbAcciones.ForeColor = Color.White;
-            gbAcciones.Location = new Point(399, 14);
+            gbAcciones.Location = new Point(583, 14);
             gbAcciones.Name = "gbAcciones";
-            gbAcciones.Size = new Size(200, 223);
+            gbAcciones.Size = new Size(200, 161);
             gbAcciones.TabIndex = 2;
             gbAcciones.TabStop = false;
             gbAcciones.Text = "Selecciona un Metodo:";
@@ -331,26 +343,28 @@
             rbElimReg.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             rbElimReg.AutoSize = true;
             rbElimReg.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rbElimReg.Location = new Point(22, 136);
+            rbElimReg.Location = new Point(22, 105);
             rbElimReg.Name = "rbElimReg";
             rbElimReg.Size = new Size(154, 24);
             rbElimReg.TabIndex = 2;
             rbElimReg.TabStop = true;
             rbElimReg.Text = "Eliminar Registros";
             rbElimReg.UseVisualStyleBackColor = true;
+            rbElimReg.CheckedChanged += rbElimReg_CheckedChanged;
             // 
             // rbModReg
             // 
             rbModReg.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             rbModReg.AutoSize = true;
             rbModReg.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rbModReg.Location = new Point(22, 106);
+            rbModReg.Location = new Point(22, 75);
             rbModReg.Name = "rbModReg";
             rbModReg.Size = new Size(160, 24);
             rbModReg.TabIndex = 1;
             rbModReg.TabStop = true;
             rbModReg.Text = "Modificar registros";
             rbModReg.UseVisualStyleBackColor = true;
+            rbModReg.CheckedChanged += rbModReg_CheckedChanged;
             // 
             // rbAgregarReg
             // 
@@ -358,25 +372,26 @@
             rbAgregarReg.AutoSize = true;
             rbAgregarReg.Checked = true;
             rbAgregarReg.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rbAgregarReg.Location = new Point(22, 76);
+            rbAgregarReg.Location = new Point(22, 45);
             rbAgregarReg.Name = "rbAgregarReg";
             rbAgregarReg.Size = new Size(154, 24);
             rbAgregarReg.TabIndex = 0;
             rbAgregarReg.TabStop = true;
             rbAgregarReg.Text = "Agregar Registros";
             rbAgregarReg.UseVisualStyleBackColor = true;
+            rbAgregarReg.CheckedChanged += rbAgregarReg_CheckedChanged;
             // 
             // btnEjecutar
             // 
-            btnEjecutar.Anchor = AnchorStyles.Left;
+            btnEjecutar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnEjecutar.BackColor = Color.Green;
             btnEjecutar.FlatStyle = FlatStyle.Popup;
             btnEjecutar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEjecutar.Location = new Point(10, 202);
+            btnEjecutar.Location = new Point(548, 202);
             btnEjecutar.Name = "btnEjecutar";
-            btnEjecutar.Size = new Size(119, 35);
+            btnEjecutar.Size = new Size(133, 35);
             btnEjecutar.TabIndex = 9;
-            btnEjecutar.Text = "Agregar";
+            btnEjecutar.Text = "Continuar";
             btnEjecutar.UseVisualStyleBackColor = false;
             btnEjecutar.Click += btnEjecutar_Click;
             // 
@@ -388,7 +403,7 @@
             cmbRango.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbRango.ForeColor = Color.White;
             cmbRango.FormattingEnabled = true;
-            cmbRango.Location = new Point(70, 105);
+            cmbRango.Location = new Point(70, 110);
             cmbRango.Name = "cmbRango";
             cmbRango.Size = new Size(100, 28);
             cmbRango.TabIndex = 6;
@@ -400,7 +415,7 @@
             txtApellido.BorderStyle = BorderStyle.None;
             txtApellido.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtApellido.ForeColor = Color.White;
-            txtApellido.Location = new Point(70, 65);
+            txtApellido.Location = new Point(70, 82);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(100, 19);
             txtApellido.TabIndex = 5;
@@ -412,7 +427,7 @@
             txtNombre.BorderStyle = BorderStyle.None;
             txtNombre.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtNombre.ForeColor = Color.White;
-            txtNombre.Location = new Point(70, 30);
+            txtNombre.Location = new Point(70, 54);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(100, 19);
             txtNombre.TabIndex = 4;
@@ -421,7 +436,7 @@
             // 
             label6.Anchor = AnchorStyles.Left;
             label6.AutoSize = true;
-            label6.Location = new Point(10, 108);
+            label6.Location = new Point(13, 116);
             label6.Name = "label6";
             label6.Size = new Size(51, 16);
             label6.TabIndex = 2;
@@ -431,7 +446,7 @@
             // 
             label5.Anchor = AnchorStyles.Left;
             label5.AutoSize = true;
-            label5.Location = new Point(10, 68);
+            label5.Location = new Point(10, 85);
             label5.Name = "label5";
             label5.Size = new Size(60, 16);
             label5.TabIndex = 1;
@@ -441,7 +456,7 @@
             // 
             label4.Anchor = AnchorStyles.Left;
             label4.AutoSize = true;
-            label4.Location = new Point(10, 30);
+            label4.Location = new Point(10, 54);
             label4.Name = "label4";
             label4.Size = new Size(59, 16);
             label4.TabIndex = 0;
@@ -476,33 +491,6 @@
             panel3.Size = new Size(800, 254);
             panel3.TabIndex = 4;
             // 
-            // btnMod
-            // 
-            btnMod.Anchor = AnchorStyles.Left;
-            btnMod.BackColor = Color.Teal;
-            btnMod.FlatStyle = FlatStyle.Popup;
-            btnMod.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnMod.Location = new Point(135, 202);
-            btnMod.Name = "btnMod";
-            btnMod.Size = new Size(119, 35);
-            btnMod.TabIndex = 18;
-            btnMod.Text = "Modificar";
-            btnMod.UseVisualStyleBackColor = false;
-            btnMod.Click += btnMod_Click;
-            // 
-            // btnDel
-            // 
-            btnDel.Anchor = AnchorStyles.Left;
-            btnDel.BackColor = Color.Crimson;
-            btnDel.FlatStyle = FlatStyle.Popup;
-            btnDel.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDel.Location = new Point(260, 202);
-            btnDel.Name = "btnDel";
-            btnDel.Size = new Size(119, 35);
-            btnDel.TabIndex = 19;
-            btnDel.Text = "Eliminar";
-            btnDel.UseVisualStyleBackColor = false;
-            // 
             // FrmABMpersonal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -519,6 +507,8 @@
             pIzquierdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvTablaPersonal).EndInit();
             pDerecha.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             gbDerecha.ResumeLayout(false);
             gbDerecha.PerformLayout();
             groupBox3.ResumeLayout(false);
@@ -538,11 +528,7 @@
         private DataGridView dgvTablaPersonal;
         private Button btnFiltrar;
         private TextBox txtFiltraNom;
-        private ComboBox cmbFiltraRango;
-        private TextBox txtFiltraCodigo;
         private Label label3;
-        private Label label2;
-        private Label label1;
         private GroupBox groupBox3;
         private RadioButton rbPermisoFalse;
         private RadioButton rbPermisoTrue;
@@ -572,7 +558,8 @@
         private CheckBox cbPermiso;
         private TextBox txtContrasena;
         private CheckBox cbActivo;
-        private Button btnDel;
-        private Button btnMod;
+        private TextBox txtCodBom;
+        private GroupBox groupBox1;
+        private CheckBox cbSelectAll;
     }
 }
