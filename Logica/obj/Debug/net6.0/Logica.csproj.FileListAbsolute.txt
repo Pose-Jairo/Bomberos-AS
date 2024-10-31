@@ -76,3 +76,18 @@ E:\Bomberos A-S\Logica\obj\Debug\net6.0\Logica.dll
 E:\Bomberos A-S\Logica\obj\Debug\net6.0\refint\Logica.dll
 E:\Bomberos A-S\Logica\obj\Debug\net6.0\Logica.pdb
 E:\Bomberos A-S\Logica\obj\Debug\net6.0\ref\Logica.dll
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\bin\Debug\net6.0\Logica.deps.json
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\bin\Debug\net6.0\Logica.dll
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\bin\Debug\net6.0\Logica.pdb
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\bin\Debug\net6.0\Datos.dll
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\bin\Debug\net6.0\Datos.pdb
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.csproj.AssemblyReference.cache
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.AssemblyInfoInputs.cache
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.AssemblyInfo.cs
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.csproj.CoreCompileInputs.cache
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.csproj.CopyComplete
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.dll
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\obj\Debug\net6.0\refint\Logica.dll
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\obj\Debug\net6.0\Logica.pdb
+C:\Users\LUCAS\Desktop\BOMBER\BD\Bomberos-AS\Logica\obj\Debug\net6.0\ref\Logica.dll

@@ -20,7 +20,5 @@ namespace Logica.Negocio
 
             return (Tabla);
         }
-
-
     }
 }
