@@ -32,16 +32,15 @@ namespace Presentacion.Formularios
             //que ingresa la emergencia?, como manejan quienes salieron a la misma.
             string detalle = txtDetalleE.Text;
             string fecha_inicio = dtpFecha.Value.ToString("yyyy-MM-dd");
-            string hora_inicio = dtpHoraInicio.Value.ToString("HH:mm:ss");
+           // string hora_inicio = dtpHoraInicio.Value.ToString("HH:mm:ss");
             string fecha_fin = dtp_FechaFinalizacion.Value.ToString("yyyy-MM-dd");
-            string hora_fin = dtpHora_Finalizacion.Value.ToString("HH:mm:ss");
+            //string hora_fin = dtpHora_Finalizacion.Value.ToString("HH:mm:ss");
 
             string emergencia = $"INSERT INTO emergencia (fecha, inicio, fin, detalle) " +
-                                $"VALUES ('{fecha_inicio}', '{fecha_inicio} {hora_inicio}', '{fecha_fin} {hora_fin}', '{detalle}')";
-            MessageBox.Show(emergencia);
+                                $"VALUES ('{fecha_inicio}','" + mtxtHoraInicio.Text +"', '"+ mtxtHoraFina.Text + "', '" +detalle + "')";
             try
             {
-                metodos.EjecutarConsulta(emergencia);
+                validaciones.PruebaAbm(emergencia);
                 MessageBox.Show("Emergencia registrada correctamente.");
             }
             catch 

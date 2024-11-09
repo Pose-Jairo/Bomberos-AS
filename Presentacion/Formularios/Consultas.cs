@@ -24,8 +24,10 @@ namespace Presentacion.Formularios
 
         DataTable Tabla = new DataTable();
 
+        
+
         string consulta = "SELECT tarea.cod_bombero AS Codigo, bombero.nombre AS Nombre, bombero.apellido AS Apellido, tarea.detalle AS Tarea, " +
-                          "tarea.estado AS Estado FROM tarea INNER JOIN bombero ON bombero.cod_bombero=tarea.cod_bombero WHERE tarea.fecha='" + DateTime.Now.ToShortDateString() + "';";
+                          "tarea.estado AS Estado FROM tarea INNER JOIN bombero ON bombero.cod_bombero=tarea.cod_bombero WHERE tarea.fecha='2024-11-07';";
 
         private void Consultas_Load(object sender, EventArgs e)
         {

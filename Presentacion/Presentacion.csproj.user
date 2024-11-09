@@ -19,10 +19,16 @@
     <Compile Update="Formularios\FrmCalificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\FrmEmergencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FrmReuniones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\PrincipalFrm.cs">

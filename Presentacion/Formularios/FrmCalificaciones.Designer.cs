@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvCalificacion = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
             label1 = new Label();
             btnImprimir = new Button();
             btnCancelarCalificaciones = new Button();
-            button2 = new Button();
+            btnRecargar = new Button();
             label2 = new Label();
             panel1 = new Panel();
+            dtpFecha = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dgvCalificacion).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -44,30 +45,32 @@
             // 
             dgvCalificacion.AllowUserToAddRows = false;
             dgvCalificacion.AllowUserToDeleteRows = false;
-            dgvCalificacion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvCalificacion.AllowUserToResizeRows = false;
+            dgvCalificacion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCalificacion.BackgroundColor = Color.FromArgb(176, 140, 145);
             dgvCalificacion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCalificacion.Columns.AddRange(new DataGridViewColumn[] { Column1 });
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(176, 140, 145);
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvCalificacion.DefaultCellStyle = dataGridViewCellStyle1;
             dgvCalificacion.Dock = DockStyle.Bottom;
-            dgvCalificacion.Location = new Point(0, 28);
+            dgvCalificacion.Location = new Point(0, 41);
             dgvCalificacion.Name = "dgvCalificacion";
             dgvCalificacion.RowHeadersVisible = false;
             dgvCalificacion.RowTemplate.Height = 25;
-            dgvCalificacion.Size = new Size(770, 303);
+            dgvCalificacion.Size = new Size(870, 326);
             dgvCalificacion.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Nombre de Personal";
-            Column1.Name = "Column1";
-            Column1.Width = 128;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(0, 9);
+            label1.Location = new Point(3, 12);
             label1.Name = "label1";
             label1.Size = new Size(174, 16);
             label1.TabIndex = 1;
@@ -80,12 +83,13 @@
             btnImprimir.FlatStyle = FlatStyle.Popup;
             btnImprimir.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnImprimir.ForeColor = Color.White;
-            btnImprimir.Location = new Point(606, 407);
+            btnImprimir.Location = new Point(706, 461);
             btnImprimir.Name = "btnImprimir";
             btnImprimir.Size = new Size(152, 49);
             btnImprimir.TabIndex = 2;
             btnImprimir.Text = ">>Imprimir<<";
             btnImprimir.UseVisualStyleBackColor = false;
+            btnImprimir.Click += btnImprimir_Click_1;
             // 
             // btnCancelarCalificaciones
             // 
@@ -94,7 +98,7 @@
             btnCancelarCalificaciones.FlatStyle = FlatStyle.Popup;
             btnCancelarCalificaciones.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancelarCalificaciones.ForeColor = Color.White;
-            btnCancelarCalificaciones.Location = new Point(12, 407);
+            btnCancelarCalificaciones.Location = new Point(12, 461);
             btnCancelarCalificaciones.Name = "btnCancelarCalificaciones";
             btnCancelarCalificaciones.Size = new Size(152, 49);
             btnCancelarCalificaciones.TabIndex = 3;
@@ -102,25 +106,26 @@
             btnCancelarCalificaciones.UseVisualStyleBackColor = false;
             btnCancelarCalificaciones.Click += SeleccionButtons;
             // 
-            // button2
+            // btnRecargar
             // 
-            button2.BackColor = Color.DarkGreen;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(12, 337);
-            button2.Name = "button2";
-            button2.Size = new Size(152, 33);
-            button2.TabIndex = 4;
-            button2.Text = "Recargar";
-            button2.UseVisualStyleBackColor = false;
+            btnRecargar.BackColor = Color.DarkGreen;
+            btnRecargar.FlatStyle = FlatStyle.Popup;
+            btnRecargar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRecargar.ForeColor = Color.White;
+            btnRecargar.Location = new Point(12, 373);
+            btnRecargar.Name = "btnRecargar";
+            btnRecargar.Size = new Size(152, 33);
+            btnRecargar.TabIndex = 4;
+            btnRecargar.Text = "Recargar";
+            btnRecargar.UseVisualStyleBackColor = false;
+            btnRecargar.Click += btnRecargar_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(170, 346);
+            label2.Location = new Point(170, 382);
             label2.Name = "label2";
             label2.Size = new Size(312, 16);
             label2.TabIndex = 5;
@@ -128,23 +133,35 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(dtpFecha);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(dgvCalificacion);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(770, 331);
+            panel1.Size = new Size(870, 367);
             panel1.TabIndex = 6;
+            // 
+            // dtpFecha
+            // 
+            dtpFecha.Anchor = AnchorStyles.None;
+            dtpFecha.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.Location = new Point(335, 12);
+            dtpFecha.Name = "dtpFecha";
+            dtpFecha.Size = new Size(200, 22);
+            dtpFecha.TabIndex = 2;
+            dtpFecha.ValueChanged += dtpFecha_ValueChanged;
             // 
             // FrmCalificaciones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(144, 93, 101);
-            ClientSize = new Size(770, 468);
+            ClientSize = new Size(870, 522);
             Controls.Add(panel1);
             Controls.Add(label2);
-            Controls.Add(button2);
+            Controls.Add(btnRecargar);
             Controls.Add(btnCancelarCalificaciones);
             Controls.Add(btnImprimir);
             FormBorderStyle = FormBorderStyle.None;
@@ -161,12 +178,12 @@
         #endregion
 
         private DataGridView dgvCalificacion;
-        private DataGridViewTextBoxColumn Column1;
         private Label label1;
         private Button btnImprimir;
         private Button btnCancelarCalificaciones;
-        private Button button2;
+        private Button btnRecargar;
         private Label label2;
         private Panel panel1;
+        private DateTimePicker dtpFecha;
     }
 }

@@ -101,12 +101,12 @@ namespace Presentacion.Formularios
         {
             if (e.RowIndex != -1 && (rbElimReg.Checked || rbModReg.Checked))
             {
-                txtCodBom.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["cod_bombero"].Value.ToString();
-                txtNombre.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
-                txtApellido.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["apellido"].Value.ToString();
-                cmbRango.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["rango"].Value.ToString();
-                cmbArea.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["nombre1"].Value.ToString();
-                var estadoVal = dgvTablaPersonal.Rows[e.RowIndex].Cells["estado"].Value;
+                txtCodBom.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["Codigo"].Value.ToString();
+                txtNombre.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
+                txtApellido.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["Apellido"].Value.ToString();
+                cmbRango.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["Jerarquia"].Value.ToString();
+                cmbArea.Text = dgvTablaPersonal.Rows[e.RowIndex].Cells["Area"].Value.ToString();
+                var estadoVal = dgvTablaPersonal.Rows[e.RowIndex].Cells["Activo"].Value;
                 if (estadoVal is bool)
                 {
                     cbActivo.Checked = (bool)estadoVal;

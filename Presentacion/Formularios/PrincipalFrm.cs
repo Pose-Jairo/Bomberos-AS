@@ -44,6 +44,8 @@ namespace Presentacion.Formularios
 
         private Button BotonAnterior { get; set; }
 
+        public string Planilla {  get; set; }
+
         private void SeleccionButtons(object sender, EventArgs e)
         {
             if (BotonAnterior != null)
@@ -78,9 +80,11 @@ namespace Presentacion.Formularios
                     OpenFormHijo(new FrmABMpersonal());
                     break;
                 case "btnAsisArea":
+                    Planilla = "Area";
                     OpenFormHijo(new FrmCalificaciones());
                     break;
                 case "btnAsisInsti":
+                    Planilla = "Institucion";
                     OpenFormHijo(new FrmCalificaciones());
                     break;
                 case "btnVolverArea":
@@ -92,6 +96,12 @@ namespace Presentacion.Formularios
                 case "btnCancelarCalificaciones":
                     OpenFormHijo(new FrmAdministracion());
                     break;
+                case "btnEmergencia":
+                    OpenFormHijo(new FrmEmergencia());
+                    break;
+                case "btnReuniones":
+                    OpenFormHijo(new FrmReuniones());
+                break;      
 
             }
         }

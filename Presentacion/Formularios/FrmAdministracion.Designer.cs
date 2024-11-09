@@ -31,13 +31,12 @@
             pInferior = new Panel();
             pSuperior = new Panel();
             pictureBox1 = new PictureBox();
-            btnCalificacion = new Button();
             btnAreas = new Button();
-            btnReuniones = new Button();
             btnBomberos = new Button();
             btnAsisArea = new Button();
             btnAsisInsti = new Button();
             pContenedor = new Panel();
+            btnEmergencia = new Button();
             pSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pContenedor.SuspendLayout();
@@ -73,20 +72,6 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // btnCalificacion
-            // 
-            btnCalificacion.Anchor = AnchorStyles.None;
-            btnCalificacion.BackColor = Color.FromArgb(97, 24, 35);
-            btnCalificacion.FlatStyle = FlatStyle.Popup;
-            btnCalificacion.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCalificacion.ForeColor = Color.White;
-            btnCalificacion.Location = new Point(577, 61);
-            btnCalificacion.Name = "btnCalificacion";
-            btnCalificacion.Size = new Size(200, 84);
-            btnCalificacion.TabIndex = 2;
-            btnCalificacion.Text = "Calificacion";
-            btnCalificacion.UseVisualStyleBackColor = false;
-            // 
             // btnAreas
             // 
             btnAreas.Anchor = AnchorStyles.None;
@@ -94,27 +79,13 @@
             btnAreas.FlatStyle = FlatStyle.Popup;
             btnAreas.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnAreas.ForeColor = Color.White;
-            btnAreas.Location = new Point(59, 61);
+            btnAreas.Location = new Point(211, 61);
             btnAreas.Name = "btnAreas";
             btnAreas.Size = new Size(200, 84);
             btnAreas.TabIndex = 3;
             btnAreas.Text = "Areas";
             btnAreas.UseVisualStyleBackColor = false;
             btnAreas.Click += SeleccionButtons;
-            // 
-            // btnReuniones
-            // 
-            btnReuniones.Anchor = AnchorStyles.None;
-            btnReuniones.BackColor = Color.FromArgb(97, 24, 35);
-            btnReuniones.FlatStyle = FlatStyle.Popup;
-            btnReuniones.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnReuniones.ForeColor = Color.White;
-            btnReuniones.Location = new Point(836, 61);
-            btnReuniones.Name = "btnReuniones";
-            btnReuniones.Size = new Size(200, 84);
-            btnReuniones.TabIndex = 4;
-            btnReuniones.Text = "Reuniones";
-            btnReuniones.UseVisualStyleBackColor = false;
             // 
             // btnBomberos
             // 
@@ -123,7 +94,7 @@
             btnBomberos.FlatStyle = FlatStyle.Popup;
             btnBomberos.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBomberos.ForeColor = Color.White;
-            btnBomberos.Location = new Point(318, 61);
+            btnBomberos.Location = new Point(456, 61);
             btnBomberos.Name = "btnBomberos";
             btnBomberos.Size = new Size(200, 84);
             btnBomberos.TabIndex = 5;
@@ -165,17 +136,31 @@
             // 
             // pContenedor
             // 
+            pContenedor.Controls.Add(btnEmergencia);
             pContenedor.Controls.Add(btnAreas);
             pContenedor.Controls.Add(btnAsisInsti);
-            pContenedor.Controls.Add(btnCalificacion);
             pContenedor.Controls.Add(btnAsisArea);
-            pContenedor.Controls.Add(btnReuniones);
             pContenedor.Controls.Add(btnBomberos);
             pContenedor.Dock = DockStyle.Fill;
             pContenedor.Location = new Point(0, 100);
             pContenedor.Name = "pContenedor";
             pContenedor.Size = new Size(1095, 351);
             pContenedor.TabIndex = 8;
+            // 
+            // btnEmergencia
+            // 
+            btnEmergencia.Anchor = AnchorStyles.None;
+            btnEmergencia.BackColor = Color.FromArgb(97, 24, 35);
+            btnEmergencia.FlatStyle = FlatStyle.Popup;
+            btnEmergencia.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEmergencia.ForeColor = Color.White;
+            btnEmergencia.Location = new Point(697, 61);
+            btnEmergencia.Name = "btnEmergencia";
+            btnEmergencia.Size = new Size(200, 84);
+            btnEmergencia.TabIndex = 8;
+            btnEmergencia.Text = "Emergencias";
+            btnEmergencia.UseVisualStyleBackColor = false;
+            btnEmergencia.Click += SeleccionButtons;
             // 
             // FrmAdministracion
             // 
@@ -201,13 +186,12 @@
 
         private Panel pInferior;
         private Panel pSuperior;
-        private Button btnCalificacion;
         private Button btnAreas;
-        private Button btnReuniones;
         private Button btnBomberos;
         private Button btnAsisArea;
         private Button btnAsisInsti;
         private Panel pContenedor;
         private PictureBox pictureBox1;
+        private Button btnEmergencia;
     }
 }

@@ -8,27 +8,27 @@ namespace Datos.Conexion
 {
     public class ConexionConBD
     {
-        public static string ObtenerServer()
-        {        
-            string server = Environment.MachineName;
+      //  public static string ObtenerServer()
+       // {        
+          //  string server = Environment.MachineName;
 
-            RegistryKey rk = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server");
-            String[]? instances = (String[])rk.GetValue("InstalledInstances");
-            if (instances.Length > 0)
-            {
-                foreach (String element in instances)
-                {
-                    string Server = server + "\\" + element + ";";
-                    return Server ;
-                }
-            }
-            return null;
-        }
+           // RegistryKey rk = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server");
+        //    String[]? instances = (String[])rk.GetValue("InstalledInstances");
+        //    if (instances.Length > 0)
+         //   {
+         //       foreach (String element in instances)
+         //       {
+         //           string Server = server + "\\" + element + ";";
+         //           return Server ;
+         //       }
+        //    }
+        //    return null;
+      //  }
 
 
-        static string server = ObtenerServer(); 
+        //static string server = ObtenerServer(); 
 
-        static private string strConexion = @"Data Source=" + server + " Initial Catalog = Bomberos; Integrated Security = true;TrustServerCertificate=True;";  
+        static private string strConexion = @"Server=LAPTOP-VTNNNOQ2\SQLEXPRESS;Database=Bomberos;Trusted_Connection=True;TrustServerCertificate=True;";
         public SqlConnection Conexion {  get; set; }
         public SqlCommand Orden {  get; set; }
 

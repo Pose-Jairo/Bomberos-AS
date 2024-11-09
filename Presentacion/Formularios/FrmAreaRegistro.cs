@@ -8,6 +8,7 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text.pdf.codec.wmf;
 using Logica.Negocio;
 
 namespace Presentacion.Formularios
@@ -23,11 +24,15 @@ namespace Presentacion.Formularios
         Validaciones validaciones = new Validaciones();
         DataTable Tabla = new DataTable();
 
-        string consulta = "SELECT bombero.cod_bombero AS Codigo, area.nombre AS Nombre, tarea.fecha AS Fecha, tarea.hora AS Hora, tarea.detalle AS Detalle, tarea.estado AS Estado, tarea.punto AS Punto FROM tarea INNER JOIN bombero ON tarea.cod_bombero = bombero.cod_bombero INNER JOIN area ON bombero.cod_area = area.cod_area";
+        string consulta = "SELECT bombero.cod_bombero AS Codigo, area.nombre AS Nombre, tarea.fecha AS Fecha, tarea.hora AS Hora, tarea.detalle AS Detalle, tarea.estado AS Estado FROM tarea INNER JOIN bombero ON tarea.cod_bombero = bombero.cod_bombero INNER JOIN area ON bombero.cod_area = area.cod_area";
 
         private void FrmAreaRegistro_Load(object sender, EventArgs e)
         {
             dgvHistorialTareas.DataSource = metodos.Actualizar(Tabla, consulta);
+
+            cmbAreas.DisplayMember = "nombre";
+            cmbAreas.ValueMember = "dod_area";
+            cmbAreas.DataSource = metodos.Actualizar(Tabla, ("SELECT * FROM area"));
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -35,13 +40,18 @@ namespace Presentacion.Formularios
             int Codigo = Convert.ToInt32(txtCodigo.Text.Trim());
 
             string DescripcionTarea = txtDescripcion.Text;
+            int area = cmbAreas.SelectedIndex + 1;
 
-            string AltaTarea = "INSERT INTO tarea (cod_area,fecha,hora,detalle) VALUES (" + txtCodigo.Text + ",'"
-            + DateTime.Today.ToString("yyyy/MM/dd") + "','" + DateTime.Now.ToShortTimeString() + "','" + txtDescripcion.Text + "');";
+            string AltaTarea = "INSERT INTO tarea (cod_bombero,fecha,hora,cod_area,detalle,estado) VALUES (" + txtCodigo.Text + ",'"
+            + DateTime.Today.ToString("yyyy/MM/dd") + "','" + mtxtHora.Text + "'," +area + ",'" + txtDescripcion.Text + "','" + "Completada');";
 
             validaciones.PruebaAbm(AltaTarea);
 
             dgvHistorialTareas.DataSource = metodos.Actualizar(Tabla, consulta);
+
+            txtCodigo.Text = "";
+            txtDescripcion.Text = "";
+            mtxtHora.Text = "";
 
         }
 
@@ -109,6 +119,43 @@ namespace Presentacion.Formularios
         private void mtxtHora_MouseClick(object sender, MouseEventArgs e)
         {
             mtxtHora.Text = "";
+        }
+
+        private void dtpBuscar_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        string cadena = "";
+        string consultaBuscar = "";
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8)
+            {
+                if (cadena.Length != 0)
+                {
+                    cadena = cadena.Remove(cadena.Length - 1);
+                }
+            }
+
+            else
+            {
+                cadena = cadena + e.KeyChar;
+            }
+
+            if (cadena == "")
+            {
+                dgvHistorialTareas.DataSource = metodos.Actualizar(Tabla, consulta);
+                dgvHistorialTareas.ClearSelection();
+            }
+            else
+            {
+                Tabla.Clear();
+                consultaBuscar = "SELECT * FROM tarea WHERE nombre LIKE '%" + cadena + "%'  OR cod_bombero LIKE '%" + cadena + "%'";
+                dgvHistorialTareas.DataSource = metodos.Actualizar(Tabla, consultaBuscar);
+                dgvHistorialTareas.ClearSelection();
+            }
         }
     }
 }

@@ -35,16 +35,10 @@
             pDerecha = new Panel();
             groupBox1 = new GroupBox();
             cbSelectAll = new CheckBox();
-            gbDerecha = new GroupBox();
-            btnFiltrar = new Button();
-            txtFiltraNom = new TextBox();
-            label3 = new Label();
             groupBox3 = new GroupBox();
             txtCodBom = new TextBox();
             label7 = new Label();
-            txtContrasena = new TextBox();
             cbActivo = new CheckBox();
-            cbPermiso = new CheckBox();
             label9 = new Label();
             cmbArea = new ComboBox();
             btnVolverBomberos = new Button();
@@ -67,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvTablaPersonal).BeginInit();
             pDerecha.SuspendLayout();
             groupBox1.SuspendLayout();
-            gbDerecha.SuspendLayout();
             groupBox3.SuspendLayout();
             gbAcciones.SuspendLayout();
             pSuperior.SuspendLayout();
@@ -125,7 +118,6 @@
             // pDerecha
             // 
             pDerecha.Controls.Add(groupBox1);
-            pDerecha.Controls.Add(gbDerecha);
             pDerecha.Dock = DockStyle.Right;
             pDerecha.Location = new Point(510, 20);
             pDerecha.Name = "pDerecha";
@@ -157,62 +149,11 @@
             cbSelectAll.UseVisualStyleBackColor = true;
             cbSelectAll.CheckedChanged += cbSelectAll_CheckedChanged;
             // 
-            // gbDerecha
-            // 
-            gbDerecha.Controls.Add(btnFiltrar);
-            gbDerecha.Controls.Add(txtFiltraNom);
-            gbDerecha.Controls.Add(label3);
-            gbDerecha.Dock = DockStyle.Bottom;
-            gbDerecha.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            gbDerecha.ForeColor = Color.White;
-            gbDerecha.Location = new Point(5, 87);
-            gbDerecha.Name = "gbDerecha";
-            gbDerecha.Padding = new Padding(0);
-            gbDerecha.Size = new Size(265, 219);
-            gbDerecha.TabIndex = 1;
-            gbDerecha.TabStop = false;
-            gbDerecha.Text = "Filtros de Busqueda:";
-            // 
-            // btnFiltrar
-            // 
-            btnFiltrar.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            btnFiltrar.BackColor = Color.DarkGreen;
-            btnFiltrar.FlatStyle = FlatStyle.Popup;
-            btnFiltrar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFiltrar.Location = new Point(71, 108);
-            btnFiltrar.Name = "btnFiltrar";
-            btnFiltrar.Size = new Size(113, 39);
-            btnFiltrar.TabIndex = 6;
-            btnFiltrar.Text = "Filtrar";
-            btnFiltrar.UseVisualStyleBackColor = false;
-            // 
-            // txtFiltraNom
-            // 
-            txtFiltraNom.BackColor = Color.FromArgb(176, 140, 145);
-            txtFiltraNom.BorderStyle = BorderStyle.None;
-            txtFiltraNom.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtFiltraNom.ForeColor = Color.White;
-            txtFiltraNom.Location = new Point(45, 48);
-            txtFiltraNom.Name = "txtFiltraNom";
-            txtFiltraNom.Size = new Size(179, 19);
-            txtFiltraNom.TabIndex = 5;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(71, 29);
-            label3.Name = "label3";
-            label3.Size = new Size(122, 16);
-            label3.TabIndex = 2;
-            label3.Text = "Nombre y Apellido:";
-            // 
             // groupBox3
             // 
             groupBox3.Controls.Add(txtCodBom);
             groupBox3.Controls.Add(label7);
-            groupBox3.Controls.Add(txtContrasena);
             groupBox3.Controls.Add(cbActivo);
-            groupBox3.Controls.Add(cbPermiso);
             groupBox3.Controls.Add(label9);
             groupBox3.Controls.Add(cmbArea);
             groupBox3.Controls.Add(btnVolverBomberos);
@@ -257,17 +198,11 @@
             label7.TabIndex = 20;
             label7.Text = "Codigo:";
             // 
-            // txtContrasena
-            // 
-            txtContrasena.Enabled = false;
-            txtContrasena.Location = new Point(201, 68);
-            txtContrasena.Name = "txtContrasena";
-            txtContrasena.Size = new Size(157, 22);
-            txtContrasena.TabIndex = 17;
-            // 
             // cbActivo
             // 
+            cbActivo.Anchor = AnchorStyles.Left;
             cbActivo.AutoSize = true;
+            cbActivo.Enabled = false;
             cbActivo.Location = new Point(201, 121);
             cbActivo.Name = "cbActivo";
             cbActivo.Size = new Size(154, 20);
@@ -275,17 +210,6 @@
             cbActivo.Text = "El usuario esta Activo";
             cbActivo.UseVisualStyleBackColor = true;
             cbActivo.Visible = false;
-            // 
-            // cbPermiso
-            // 
-            cbPermiso.AutoSize = true;
-            cbPermiso.Enabled = false;
-            cbPermiso.Location = new Point(201, 26);
-            cbPermiso.Name = "cbPermiso";
-            cbPermiso.Size = new Size(179, 36);
-            cbPermiso.TabIndex = 15;
-            cbPermiso.Text = "El usuario tiene permisos \r\nde administracion";
-            cbPermiso.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -509,8 +433,6 @@
             pDerecha.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            gbDerecha.ResumeLayout(false);
-            gbDerecha.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             gbAcciones.ResumeLayout(false);
@@ -524,11 +446,7 @@
         #endregion
 
         private GroupBox gbSuperior;
-        private GroupBox gbDerecha;
         private DataGridView dgvTablaPersonal;
-        private Button btnFiltrar;
-        private TextBox txtFiltraNom;
-        private Label label3;
         private GroupBox groupBox3;
         private RadioButton rbPermisoFalse;
         private RadioButton rbPermisoTrue;
@@ -555,8 +473,6 @@
         private Label label8;
         private Label label9;
         private ComboBox cmbArea;
-        private CheckBox cbPermiso;
-        private TextBox txtContrasena;
         private CheckBox cbActivo;
         private TextBox txtCodBom;
         private GroupBox groupBox1;
